@@ -1,0 +1,175 @@
+This document explains how to go from a script to a plot based on my proces
+	that is mostly coppied from Fionn's work and readme file
+--------------------------------------------------------------------------------
+
+Basic Overview:
+
+The FiveMovieTestFolder contains several important files.
+
+ca.r and clink_hcluswtd.r are expected to be there and are used to make the plots
+
+script_parser_loop2.pl expects a Parsed folder to exist and takes two parameters
+	I used 1_M.txt and 1_GarbageFile.txt for single movies
+	
+The Movies folder contains parsed movies with their allfile.txt, allword.txt,
+	and xtab.txt files allong with coppies of the scrips to make allword and xtab
+
+Reserves is just some scrips I haven't done yet but had planed to at some point
+
+RPlots is the folder I put all the ploted PDFs 
+
+CorespondencePlot.r doesn't actually run, but I used it to easily copy/paste the
+	r commands into the terminal. It has some stuff I was experimenting with.
+
+All the MovieNameCP.r files are specific versions of CorespondencePlot.r
+
+
+Notes for using the Super Computer for this:
+	(Refer to these as needed)
+
+To run the interactive job use command
+qsub -I -l nodes=1:ppn=1 -l walltime=50:00
+where the walltime is how long you need the job for
+there may be a need to modify this command to run as a big job to fix the memory
+issue that I had when attempting this...
+
+To move desiered files over use command from directory
+scp filename username@triton-login.sdsc.edu:~/WhereYouWantToPutIt
+
+And to get files off the super computer use in the directory you want it in
+scp username@triton-login.sdsc.edu:~/PathToFile .
+the "." copies it to current directory
+
+As is mentioned later you need to recompile the code to make allwords and xtab
+
+to run R you use the command
+module load R
+and then run R with command 
+R (the capital is important)
+
+--------------------------------------------------------------------------------
+
+Step 1: Parse the movie
+
+Pick the Movie/Movies to be parsed
+
+Clear out the Parsed folder, but save allwords.txt, xtab.txt, and the two scripts
+	(txtanalysis and xtabulate), if you have them
+
+Make sure script_parser_loop2.pl and the text file of the script you want to parse
+	are in the same file with a Parsed folder and a text file containing the name
+	of the movie and an empty file for garbage output
+
+run perl script_parser_loop2.pl passing the movie name file and the garbage file
+	in that order
+	
+Parsed will now have the text files for every scene in the movie named with
+	the origional movie's name followed by an incrimental number
+
+
+--------------------------------------------------------------------------------
+
+Step 2: Make xtab.txt
+
+With only the scene text file in Parsed, run the command
+	ls > allfiles.txt
+to get a file that contains a list of all the scene files
+
+You have to manually go into the file and delete the line for allfiles.txt or
+	you'll get and extra, unwanted, scene in your ovie analysis
+	
+Make sure to put allwords.txt, xtab.txt and the two scripts 
+	(txtanalysis and xtabulate) back into the Parsed folder
+	
+Make sure to delete the contents of allwords and xtab because it seems to 
+	cause problems if you dont
+	
+If you are doing this on another operating system you may need to use the C++
+	files in MoviesForSC to complie the scripts. For instance, if you're running
+	on the superc omputer. If you don't name their exicutables then you'll be 
+	using a.out.
+	
+Run
+	./txtanalysis allfiles.txt allwords.txt 
+to make the allwords.txt file
+
+Then run
+	./xtabulate allwords.txt allfiles.txt xtab.txt
+to get the xtab.txt file
+
+I now copy the Parsed folder into Movies and rename it appropriatly so that I 
+	can easily skip to this point next time I want to make a plot of this movie
+
+
+--------------------------------------------------------------------------------
+
+Step 3: R
+
+Open R in the terminal
+
+Open/Make a movie specific CP.r file
+
+You'll want to change a few things so here's an example fiile with comments
+	on what to change
+	
+			******************************************
+
+#The location of the xtabfile
+xtabloc <- ("~/Desktop/FiveMovieTest/Movies/LOTRF/xtab.txt");
+#The location of ca.r
+caloc <- ("~/Desktop/FiveMovieTest/ca.r");
+#the location of clink_hcluswtd.r
+clickloc <- ("~/Desktop/FiveMovieTest/clink_hcluswtd.r");
+#The place to save the plots
+pdfloc <- ("~/Desktop/FiveMovieTest/RPlots/LOTRF.pdf");
+#The name of the plot
+tt <- ("Lord of the Rings Felowship of the Ring");
+
+#This chunck crunches the numbers for the plot and is the same for any movie
+xtab <- read.table(xtabloc);
+source(caloc);
+xtabx <- ca(t(xtab));
+source(clickloc);
+xtabxh <- hierclust(xtabx$cproj);
+xtabxhr <- reorder(as.dendrogram(xtabxh, hang=-1), 1:nrow(xtabx$cproj), agglo.FUN=min);
+
+#This section determines which words are red in the plot
+#selnames is a list of all the red words
+#seletion is a list of the line numbers from allwords.txt that correspond to the 
+#   selected words in selnames
+selection <- c(3, 6, 15, 16, 22, 23, 24, 28, 32, 64, 76, 80, 231);
+selnames <- c("frodo", "gandalf", "sam", "ring", "bilbo", "boromir", "aragorn", "pippin", "merry", "gimli", "fellowship", "legolas", "gollum");
+ytab <- xtab[,selection];
+apply(ytab,1,sum);
+source(caloc);
+ytaby <- ca(t(ytab));
+
+#This section makes the PDF with the plot
+pdf(pdfloc, width = 60, height = 30);
+plot(xtabxhr);
+title(tt, sub = "Sorted Hierarchical Cluster", cex.main = 8, col.main = "blue", cex.sub = 5, col.sub = "sky blue");
+
+plot(xtabxh);
+title(tt, sub = "Unsorted Hierarchical Cluster", cex.main = 8, col.main = "blue", cex.sub = 5, col.sub = "sky blue");
+
+plot(ytaby$cproj[,1],ytaby$cproj[,2],type="n",xlab="Factor 1",ylab="Factor 2");
+#This line must be changed for each movie
+#The 147 at the end is the number of scenes in this movie
+#That number should reflect the number of scenes in the movie being ploted
+#You can esily find the number by looking at the name of the last file in the 
+#Parsed folder for the desired movie. Don't forget to add one thought because 
+#the parsed folder ushally starts numbering at 0
+text(ytaby$cproj[,1],ytaby$cproj[,2],1:147);
+title(tt, sub = "Scatter Plot", cex.main = 8, col.main = "blue", cex.sub = 5, col.sub = "sky blue");
+text(ytaby$rproj[,1],ytaby$rproj[,2],selnames,col="red");
+dev.off();
+
+			******************************************
+
+You should now have a plot PDF!!
+
+	
+
+
+
+

@@ -1,0 +1,22 @@
+int.  hall - day
+
+marines, trying to communicate with the men on the roof,
+are beginning to panic when agent jones comes around the
+corner.
+
+                         sergeant
+          sir!  sir!  there was gunfire --
+          we've lost communication with the
+          roof!
+
+                         agent jones
+          remain at your posts.
+
+                         sergeant
+          but, sir -- the fire -- we should
+          evacuate!
+
+                         agent jones
+          you will do as you are ordered!
+
+
