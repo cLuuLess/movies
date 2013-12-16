@@ -1,5 +1,0 @@
-int.  stairwell - day
-
-cops flood the eighth floor, rushing everywhere.
-
-

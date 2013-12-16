@@ -1,5 +1,0 @@
-int.  hall
-
-the ship is quiet and dark.  everyone is asleep.
-
-
