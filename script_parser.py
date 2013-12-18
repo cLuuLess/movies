@@ -81,6 +81,9 @@ def main(argv):
   if not len(argv) == 1:
     print 'Usage: python script_parser.py [filename]'
     return
+  # if Parsed folder doesn't exist, create it
+  if not os.path.exists(folder):
+    os.makedirs(folder)
   split_files(argv[0])
   write_xtab()
 
