@@ -1,5 +1,6 @@
 import nltk
 import os
+import re
 import string
 import sys
 from collections import Counter
@@ -20,12 +21,15 @@ def split_files(filename):
     # a lot of scripts are in Latin-1 encoding
     # TODO not sure if they all are Latin-1, so this should be conditional
     line = line.lower().decode('iso-8859-1').encode('utf8')
+    line_match = re.match(r"[0-9 ]+(int.|ext.)+", line.strip())
     # if reach ext/int, finish writing and open new file
     # not sure if this encompasses all variations of int/ext
     if (line.strip().startswith('ext.') or
         line.strip().startswith('int.') or
         line.strip().startswith('internal') or
-        line.strip().startswith('external')):
+        line.strip().startswith('external') or
+        line.strip().startswith('fade in:') or
+        line_match != None):
       # close the previous file
       f_write.close()
       scene_num += 1
@@ -34,7 +38,7 @@ def split_files(filename):
       f_write.write(line)
       continue
     # if reach the end, stop
-    if line.strip() == 'the end':
+    if line.strip() == 'the end' or line.strip() == 'fade out':
       break
     # only update the vocabulary if we're not at scene 0 (beginning garbage)
     if scene_num != 0:
