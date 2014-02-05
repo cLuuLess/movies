@@ -44,6 +44,8 @@ def split_files(filename):
     if scene_num != 0:
       # remove punctuation and tokenize (TODO check if punctuation removal is correct)
       tokenized = nltk.word_tokenize(line.translate(None, string.punctuation))
+      # remove (scene) numbers and single letter words
+      tokenized = [w for w in tokenized if not w.isdigit() and len(w) > 1]
       # create counter dictionary from this scene and add to the total 
       totalwordcounts.update(Counter(tokenized))
     # write the line
@@ -80,7 +82,14 @@ def write_xtab():
           
   xtab.write('\n')
   xtab.close()
-
+  
+def write_allwords():
+  allwords = open(folder + 'allwords.txt', 'w')
+  # write totalwordcounts to xtab in descending value order
+  for w in sorted(totalwordcounts, key=totalwordcounts.get, reverse=True):
+    allwords.write(w + ' ' + str(totalwordcounts[w]) + '\n')
+  allwords.close()
+    
 def main(argv):
   if not len(argv) == 1:
     print 'Usage: python script_parser.py [filename]'
@@ -90,6 +99,7 @@ def main(argv):
     os.makedirs(folder)
   split_files(argv[0])
   write_xtab()
+  write_allwords()
 
 if __name__ == '__main__':
   main(sys.argv[1:])
