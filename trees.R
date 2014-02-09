@@ -8,9 +8,9 @@ dataIn <- dataIn[,4:26] # Get rid of first col with movie names
 #cpVals <- c(0.01, 0.001, 0.0001)
 #R2scores <- rep(0, length(nTrees)*length(minSplit)*length(cpVals))
 #R2index = 1
-nTrees <- c(40)
+nTrees <- c(70)
 minSplit <- c(3)
-cpVals <- c(0.001)
+cpVals <- c(0.0001)
 
 maxR2 = 0
 t_final = 0
@@ -73,10 +73,6 @@ for (numTrees in nTrees) {
           dev.off()
         }
       }
-      
-      MSE
-      R2
-      
     }
   }
 }
@@ -86,12 +82,29 @@ m_final
 c_final
 
 #########
+# relevance index (this code is broken, get relevance index from the next one)
 finaltreelist = table(data.frame(c(names(dataIn[-1]),"<leaf>")))
 for (t in seq(1,length(treelist))) {
   treelength = length(treelist[[t]]$frame$var)
   for (v in seq(1,treelength)) {
-    finaltreelist[treelist[[t]]$frame$var[v]] = 
-      finaltreelist[treelist[[t]]$frame$var[v]] + 1
+    feature = as.character(treelist[[t]]$frame$var[v])
+    finaltreelist[feature] = finaltreelist[feature] + 1
   }
 }
-write.table(finaltreelist,file="~/relevanceindex.csv",sep=",")
+write.table(finaltreelist,file="~/Research/Data/relevanceindex.csv",sep=",")
+###########
+# depth - use this
+numcols = 22
+depths <- as.data.frame(setNames(replicate(numcols,numeric(0), simplify = F), names(dataIn[-1])))
+for(i in 1:15) depths[i, ] <- rep(0,numcols)
+depths["<leaf>"] <- 0
+for (t in seq(1,length(treelist))) {
+  treelength = length(treelist[[t]]$frame$var)
+  varInd <- as.numeric(row.names(treelist[[t]]$frame))
+  for (v in seq(1,treelength)) {
+    row = floor(log2(varInd[v])) + 1
+    col = as.character(treelist[[t]]$frame$var[v])
+    depths[row, col] <- depths[row, col] + 1
+  }
+}
+write.table(depths,file="~/Research/Data/depths.csv",sep=",")
