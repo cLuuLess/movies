@@ -7,6 +7,7 @@ from collections import Counter
 
 folder = 'Parsed/'
 totalwordcounts = Counter()
+stemmer = nltk.stem.porter.PorterStemmer()
 
 # This function takes in a film script and splits it into scenes. Each scene is written into a
 # separate file in the ./Parsed/ folder.
@@ -21,7 +22,7 @@ def split_files(filename):
     # a lot of scripts are in Latin-1 encoding
     # TODO not sure if they all are Latin-1, so this should be conditional
     line = line.lower().decode('iso-8859-1').encode('utf8')
-    line_match = re.match(r"[0-9 ]+(int.|ext.)+", line.strip())
+    line_match = re.match(r"[0-9 \t]+(int.|ext.|fade in|int --|ext --)+", line.strip())
     # if reach ext/int, finish writing and open new file
     # not sure if this encompasses all variations of int/ext
     if (line.strip().startswith('ext.') or
@@ -38,14 +39,13 @@ def split_files(filename):
       f_write.write(line)
       continue
     # if reach the end, stop
-    if line.strip() == 'the end' or line.strip() == 'fade out':
+    if (line.strip().startswith('the end') or
+        line.strip().startswith('fade out') or
+        line.strip().startswith('fade to black')):
       break
     # only update the vocabulary if we're not at scene 0 (beginning garbage)
     if scene_num != 0:
-      # remove punctuation and tokenize (TODO check if punctuation removal is correct)
-      tokenized = nltk.word_tokenize(line.translate(None, string.punctuation))
-      # remove (scene) numbers and single letter words
-      tokenized = [w for w in tokenized if not w.isdigit() and len(w) > 1]
+      tokenized = tokenize(line)
       # create counter dictionary from this scene and add to the total 
       totalwordcounts.update(Counter(tokenized))
     # write the line
@@ -55,6 +55,13 @@ def split_files(filename):
   f_read.close()
   # returned for debugging purposes
   return totalwordcounts
+
+def tokenize(line):
+  # remove punctuation and tokenize (TODO check if punctuation removal is correct)
+  tokenized = nltk.word_tokenize(line.translate(None, string.punctuation))
+  # remove (scene) numbers and single letter words
+  tokenized = [stemmer.stem(w) for w in tokenized if not w.isdigit() and len(w) > 1]
+  return tokenized
 
 # This function reads in the parsed scenes and writes their corresponding count matrices
 # to ./Parsed/xtab.txt.
@@ -74,7 +81,7 @@ def write_xtab():
         # skip the first line that has the ext/int setting
         cur_read.readline()
         # create a counter dictionary for just this scene
-        tokenized = nltk.word_tokenize(cur_read.read().translate(None, string.punctuation))
+        tokenized = tokenize(cur_read.read())
         cur_words = Counter(tokenized)
         # write out all values as sparse matrix of counts
         for w in sorted(totalwordcounts, key=totalwordcounts.get, reverse=True):
