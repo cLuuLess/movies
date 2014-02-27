@@ -27,10 +27,10 @@ for (dim in numDims) {
     
     wordcount = apply(xtab,2,sum);
     totalwords = sum(wordcount);
-    cutoffpercent = 0.01;
+    cutoffpercent = 0.0009;
     wordcutoff = min(which(wordcount <= totalwords*cutoffpercent))
     wordsel <- c(1:wordcutoff); 
-    wordsel2 <- which(xtabx$rcntr[1:wordcutoff,dim] < mean(xtabx$rcntr[1:wordcutoff,dim]) + 3*sd(xtabx$rcntr[1:wordcutoff,dim]))
+    wordsel2 <- which(xtabx$rcntr[1:wordcutoff,1:3] < mean(xtabx$rcntr[1:wordcutoff,1:3]) + 3*sd(xtabx$rcntr[1:wordcutoff,1:3]))
     ytab <- xtab[,wordsel2];
     
     #cutoffselection <- c(1:1000);
