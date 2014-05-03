@@ -1,9 +1,0 @@
-int. tank turret
-
-                            tank commander
-
-                               "fire!"
-
-                    the gunner pulls the trigger.
-
-

@@ -1,4 +1,0 @@
-211	int.  diva's  suite
-
-	the timer on zorg's bomb clicks over to "15 minutes".
-

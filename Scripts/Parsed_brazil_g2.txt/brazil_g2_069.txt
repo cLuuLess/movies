@@ -1,5 +1,0 @@
-79  int.   basement					 day		   79
-	
-	the guard throws the alarm switch.
-	
-	
