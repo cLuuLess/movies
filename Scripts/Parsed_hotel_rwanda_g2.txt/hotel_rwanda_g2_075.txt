@@ -1,15 +1,14 @@
-ext. hotel forecourt. day
+int. hotel lobby. day
 
-chaos - un jeeps, hotel vans, dismayed tourists, frightened tutsi
-refugees.
+paul rushes in: the lobby is filled with tutsi refugees, and scared
+white tourists.
 
-close on: bik, the dutch manager, bag packed, anxious, sees paul.
+a solitary receptionist, besieged by anxious guests, is relieved to see
+paul.
 
-yells.
+                        receptionist
+            oh, sir, please can you...
 
-                        bik
-            paul, i have to talk to you ...
-
-but paul ignores bik, barrels his way through the din and crush of the
-parking lot.
+paul rushes to the accounting room behind the reception desk, closes
+the door.
 

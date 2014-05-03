@@ -1,14 +1,13 @@
-72   int. skid row hotel corridor                                   72
+73   int. fancy hotel corridor - night                              73
 
-     at the far end of a long and gloomy hallway, we can see
-     marco arrive at the door to melvin's room. he hesitates,
-     then knocks --
+     raymond comes down the brightly-lit, elegant hallway, tired,
+     trailing anderson and his secret service entourage.
 
-                          marco
+                         raymond
 
-               al?   al melvin, it's marco ...
-     nothing. he looks at his watch, turns, walks back down the
-     narrow, high-ceilinged corridor -- haunting sounds of radios
-     and televisions and broken conversations -- he disappears
-     down the stairs --
+               ... the enemy is among us. the wolf is
+               at the door ... the fox is in the
+               henhouse ... the weasel is ... the weasel
+               is ...
+     they take his room keycard from him, open the door --
 

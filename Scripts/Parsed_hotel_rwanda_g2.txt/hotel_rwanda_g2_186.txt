@@ -1,17 +1,30 @@
-ext. hotel forecourt. day
+int. jeep travelling. day
 
-bizimungu's jeeps arrives at the hotel. paul greets him.
+the jeep turns away from the mille collines front gate.
+
+they travel at high speed along the road. then the driver sounds his
+horn, because...
+
+paul sees: a large crowd of militia marching along the road toward the
+hotel, waving machetes and sticks.
 
                         paul
-            we must go to the diplomat.
+            where are they going?
 
                         general bizimungu
-            get in.
+            they can go where they want. they are in
+            charge now.
 
                         paul
-            your police are at the gate?
+            what do you mean, general?
 
                         general bizimungu
-            after the diplomat!
-            paul clambers in the back.
+            we have decided to move the government to
+            gitarama.
+
+                        paul
+            when?
+
+                        general bizimungu
+            today.
 

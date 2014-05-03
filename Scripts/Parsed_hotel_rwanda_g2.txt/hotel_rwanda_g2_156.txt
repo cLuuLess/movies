@@ -1,12 +1,14 @@
-int. hotel lobby. day
+ext. hotel forecourt. day
 
-the lucky families are gathered: tatiana and all her children; xavier
-and his wife; benedict; and others.
+the un convoy waits outside. tatiana waits nervously as paul checks
+his watch.
 
-some of the unlucky ones peer around the door of the ballroom. a un
-officer stands in their way.
+                        tatiana
+            a little longer, paul?
 
-                        un lieutenant
-            back. everyone back. only those with
-            letters of acceptance in the lobby.
+                        paul
+            we wait until 7:00. if he is not here
+            with the twins he is not coming. we
+            leave. that was your promise. go help the
+            children.
 

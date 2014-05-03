@@ -1,26 +1,35 @@
-int. hotel corridor. day
-
-paul hurries his family along the corridor. rwandan refugees wander
-aimlessly pulling their meagre possessions.
-
-                        refugee
-                 (calls out)
-            moses, moses seradungu.
+int. hotel room. day
+paul leads his family into a one-bedroom suite. the kids drop to the
+beds exhausted. tatiana picks up the phone and dials.
 
                         paul
-            can i help you?
+            what are you doing?
 
-                        refugee
-            i'm looking for moses seradungu's room.
+                        tatiana
+            trying thomas and fedens. we've got to
+            get them here.
+
+paul paces the room. the maids clearly haven't cleaned it since it's
+last occupants: the beds are unmade; towels are on the floor; and a
+newspaper is scattered across the desk.
 
                         paul
-            what is his room number?
+            (re: room) this won't do.
 
-                        refugee
-            i don't know.
+                        tatiana
+            it will do just fine.
+
+so paul tidies the place. as he does,
 
                         paul
-            go downstairs, i will help you.
+            any luck?
 
-paul finds his room and opens the door.
+                        tatiana
+            no answer. please send someone to get
+            them, please.
+
+                        paul
+            i'll try.
+
+paul leaves.
 

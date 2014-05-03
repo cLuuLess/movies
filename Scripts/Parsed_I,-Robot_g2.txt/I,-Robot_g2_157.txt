@@ -1,5 +1,6 @@
-157   int. metal hallway - night                                   157
+158   int. mainframe room - continuous                             158
 
-      a furious alfred lanning, marching down the hallway.
-      followed by a cadre of security guards...they enter...
+      ...the mainframe room. stop short. it's empty. except for
+      the fallen panels. and the pile of robot parts in the
+      corner.
 

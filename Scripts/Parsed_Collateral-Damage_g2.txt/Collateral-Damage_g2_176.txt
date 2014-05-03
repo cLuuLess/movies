@@ -1,7 +1,9 @@
-370   ext. town house - back yard                                     370
+372   int. town house garage                                          372
 
-      gordy bursts through a gate. sees back steps leading to
-      the open door of a second-story over a garage and charges
-      the steps.
+      gordy blows into the second story of the garage, a
+      converted old-time carriage barn. he's in the old
+      hayloft. on the opposite side of the loft, a double
+      door built for loading in hay is open above the street.
+      gordy sprints for the opening, and...
 
 

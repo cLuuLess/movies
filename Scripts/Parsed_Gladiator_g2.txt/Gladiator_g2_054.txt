@@ -1,39 +1,25 @@
-int.  provincial arena - dugout - tunnels - day
+ext.  provincial arena - day
 
-maximus is marching relentlessly through the dugout and
-cramped, serpentine trench-like tunnels that lead to the
+we continue with maximus as he strides into the roaring
 arena.
 
-we don't really see maximus well in the dark tunnels.
+we finally see him in the blazing sunlight -- he wears
+traditional gladiator armor and now has longer hair and a
+beard --
 
-proximo scurries to keep up with him -- they brush past
-gladiators who line the walls.  some are wounded, some are
-being attended to by surgeons, some are shell-shocked,
-some are nervously waiting to go on, whispering prayers.
+a battle is already in progress, fighting and dead and
+dying gladiators crowd the arena --
 
-we twist and turn in the tunnels with proximo and maximus
-as:
+we stay with maximus as he wades through his opponents,
+fighting them heroically, slashing through them without
+stopping --
 
-					proximo
-			(quickly)
-		i've wagered on you against the
-		celts -- ignore the others and go
-		for them -- there are two axe-and-
-		net and two long spear.  now the
-		celts aren't used to the sun so you
-		have the advantage there...
+the large crowd cheers mightily -- chants of "spaniard!
+spaniard!  spaniard!"
 
-the roar of the crowd is growing, they are nearing the
-arena...
+we stay with maximus as he cuts through the four celts
+like a scythe through wheat and then we dramatically pull
+up and away --
 
-					proximo
-		and keep them moving, their lungs
-		aren't strong, ground the spears as
-		soon as you can and then go for the
-		ax-men.  if you get all four there's
-		an extra bonus so don't be
-		distracted by the spartans...
-
-without a word to proximo, or a moment's hesitation,
-maximus strides into the arena.
+taking in the roaring arena and the hero.
 

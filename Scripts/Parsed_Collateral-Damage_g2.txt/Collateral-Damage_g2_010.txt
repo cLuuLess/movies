@@ -1,5 +1,9 @@
-15   int. tenement hallway                                         15
+16   ext. tenement                                                 16
 
-     gordy lowers the family through the floor hole.
+     gordy carries the family's small child outside. he
+     passes the child to its grateful parents, while...
+
+     the rescued firefighter sits on a curb looking at a hero
+     and shaking his head in disbelief and admiration.
 
 

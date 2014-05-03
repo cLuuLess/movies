@@ -1,6 +1,15 @@
-int. hotel lobby. day
+int. hotel kitchen. day
 
-paul works his way through the crowds in the lobby, sees a trolley of
-dishes by an elevator, looks around, can't see any staff. disgusted, he
-pushes the trolley himself.
+paul pushes the trolley into the deserted kitchen. at the back door,
+several cooks listen to the radio.
+
+                        radio announcer
+            'good hutus, we must destroy an
+            infestation of cockroaches at the
+            technical college.'
+
+                        paul
+            turn that off. we have a hotel to run.
+
+the cooks halfheartedly slouch back to the sinks.
 

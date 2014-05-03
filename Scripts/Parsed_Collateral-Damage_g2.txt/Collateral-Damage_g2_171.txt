@@ -1,28 +1,11 @@
-361   ext. building's top floor                                    361
+367   ext. street                                                  367
 
-      boom! a massive explosion spits flame out of the windows
-      of the building's top floor.
+      claudio guns the bike down the second street, parallel to
+      gordy's alley. he and selena reach an intersection with
+      the one-way street. a right turn will complete the "u"
+      and take them back toward gordy. straight ahead, the
+      street they're on is one-way in the opposite direction.
+      claudio hangs right and cranks on the speed.
 
-
-362   people                                                       362
-
-      dive for cover.   debris showers the street.
-
-
-363   gordy                                                        363
-
-      keeps moving.
-
-
-364   street in front of institute                                 364
-
-      runs one way in the direction the ducati's headed. far
-      down the block, the bike turns right onto another one-way
-      street.
-
-
-365   gordy                                                        365
-
-      spots an alley on his right and turns into it.
-
+                                                               123.
 

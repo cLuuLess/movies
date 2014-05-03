@@ -1,15 +1,6 @@
-153   int. statue - atrium - continuous                              153
+154   int. ramp way - night                                          154
 
-      spooner. aiming his gun at a part of the killer robot as
-      it clatters down towards calvin -- bam!...
-
-      they're almost. at the ground. when a rogue appendage.
-      whips out and smashes the gun from spooner's hand. it goes
-      flying...
-
-      spooner leaps. falling to the ground.    crack!    calvin.
-      leaping down after him.
-
-                               calvin
-                   this way!
+      calvin and spooner go racing down a ramp way. towards the
+      mainframe room. the killer robot, its multiple parts leaping
+      back together again, crashing after them as...
 

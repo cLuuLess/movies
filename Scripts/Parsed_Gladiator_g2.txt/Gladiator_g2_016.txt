@@ -1,93 +1,217 @@
-int.  hospital tent - night
+int.  mess tent - night
 
-maximus enters a large tent and is met by a spectacle of
-the dead and dying.  roman surgeons are working feverishly
-to save lives.  limbs are amputated, the bloody stumps
-quickly cauterized with hot irons.  leeches and bronze
-cups are employed for blood-letting to balance "humours."
+an immediate swirl of noise.  the grand mess tent is
+crowded with soldiers.  they are still filthy with caked-
+on mud and blood.  wounds are bandaged and tankards are
+raised in celebration of the victory.
 
-anesthesia as we know it is nonexistent.  wine amphoras
-are passed around and orderlies fan narcotic smoke toward
-the patients.  mostly, though, they just hold down the
-writhing patients.
+marcus sits in a central position and receives visitors.
+currently two senators, falco and gaius, are bowing before
+him.
 
-maximus moves through the tent, offering a word of comfort
-here and there.  all the wounded are delighted to see him.
+					falco
+		hail, marcus aurelius.
 
-he goes to an older soldier, gallus, who has one wooden
-hand.  his other hand is bandaged.
+					marcus
+		stand up, senators.  that unfamiliar
+		posture doesn't suit you.
 
-					maximus
-		what, gallus, losing your other
-		hand?
+					gaius
+		we live in supplication to your
+		glory.
 
-					gallus
-		aye, general, they're going to make
-		a bronze one for it.  long fingers
-		this time.
+					marcus
+		all the while conspiring with that
+		fat man in rome.  how is the old
+		monster?
 
-					maximus
-		and the women of your village will
-		crave your touch even more.
+					gaius
+		senator gracchus is hale, sire.
 
-					gallus
-		ah, then you know the women of my
-		village.
+					marcus
+		still damning me to the four winds?
 
-maximus smiles and moves on.
+					gaius
+		still eager for your triumphant
+		return to rome, caesar.
 
-he stops at a young soldier, valerius, whose head has been
-shaved.  a hole has been bored into his skull to relieve
-the pressure on his brain.  the young soldier is dying.
+					marcus
+		i would have silenced him decades
+		ago -- but i just like him too much.
 
-					maximus
-		what's your name, son?
-
-					valerius
-		valerius, general.
+meanwhile, maximus stands with his lieutenants, titus and
+quintus.  a wound on maximus' arm has been bound.
 
 					maximus
-		the name suits you.
+			(to titus)
+		if you want to stay on, i support
+		you.  so do the men.  i'll ask the
+		emperor to appoint you in my place.
 
-					valerius
-		why am i dying?
-
-a beat.  maximus sits by his cot.  he takes valerius'
-hand.
-
-					maximus
-		you're dying because you love rome,
-		as i do.
-
-					valerius
-		i've never been to rome.
+					titus
+		it won't be the felix regiment
+		without you.
 
 					maximus
-		neither have i.  rome for us lives
-		here...
-			(he touches his
-			heart)
-		... it's a thing inside us that came
-		from our ancestors and that we give
-		to our children.
+		i'll return after a season at home.
+		maybe two.
 
-					valerius
-		it must be glorious, rome.  i've
-		only seen pictures.  is it a
-		glorious place?
+					quintus
+		that means after three or four more
+		babies.
 
-a beat.
+					titus
+		and you'll be too fat from vibia's
+		cooking to get on your horse by
+		then.
 
 					maximus
-		yes, it's a glorious place.
+		should the gods so bless me.  i
+		would be thankful.
 
-					valerius
-		it must be.
+commodus perambulates up to them.
 
-he smiles.  and he is dead.
+					commodus
+		hail, warriors.  my congratulations.
 
-maximus sits for a moment.  he gently closes valerius'
-eyes.  and maximus finds that he is weeping.
+					titus and quintus
+			(bowing)
+		highness.
 
-he is not ashamed of the tears.
+					commodus
+			(to maximus)
+		my old friend, my father tells me
+		you're returning to spain?
+
+					maximus
+		yes.
+
+					commodus
+		a pity.  i'll need men like you in
+		my army...
+
+an awkward glance between the soldiers.  this sort of talk
+is offensively premature.
+
+					commodus
+		there are larger division that might
+		appeal to you.  even the praetorian
+		guard.  you've never been to rome.
+		imagine arriving as head of the
+		praetorians!  they have really
+		splendid uniforms.
+
+					maximus
+			(cold)
+		i'm going home.
+
+senators gaius and falco join them.
+
+					gaius
+			(to maximus)
+		... and why not apply for entry to
+		the senate?
+
+					falco
+		a war hero with a handsome face and
+		a strong heart could go far.
+
+					commodus
+		general maximus, may i present
+		senators gaius and falco.  beware of
+		this gaius, he'll pour a honeyed
+		potion in your ear and you'll wake
+		up one day and all you'll say is
+		"republic, republic, republic..."
+
+laughter.
+
+					falco
+		have you never considered rome?
+
+					maximus
+		no.
+
+					commodus
+		you've had my ear since we were
+		children.  you could be a valuable
+		ally in the senate.
+
+					gaius
+		are you a believer in republicanism?
+
+					commodus
+			(laughs)
+		there -- i warned you.
+
+					maximus
+		i'm a soldier, not a politician.
+
+meanwhile, a dark eye is studying the men through a hidden
+slit in the tent wall.  the eye is particularly drawn to
+maximus.
+
+					gaius
+		if your heart lies with the people,
+		i would back you for the senate.
+		i'm sure gracchus would as well.
+
+					commodus
+		not a word about that sodomite
+		bastard.
+
+					gaius
+			(smiles to maximus)
+		the august senator gracchus has been
+		rather a gadfly on the flesh of the
+		imperial family.
+
+					falco
+		he's a damned provocateur.
+
+					gaius
+		he lives under the antiquated
+		assumption that the senate should
+		represent the people with vigor.
+
+					commodus
+		i won't tolerate it.  his incessant
+		criticism exhausts me.  the man can
+		speak for five hours without taking
+		a breath.
+
+					gaius
+		he serves rome best when he serves
+		it with honesty.
+
+					commodus
+			(sharply)
+		enough... maximus, i would like to
+		inspect the felix regiment at dawn.
+		please arrange it.
+
+					maximus
+		i can't do that.
+
+					commodus
+		excuse me?
+
+					maximus
+		my men have been fighting for five
+		solid days.  they're too busy dying
+		to go on dress parade.
+
+a beat.  commodus' eyes flash fire at this public rebuke.
+he very quickly gets control.
+
+					commodus
+			(smiles)
+		of course, how foolish of me.  some
+		other time...
+
+he notes his father being helped out of the tent by
+several body slaves.
+
+					commodus
+		caesar retires early tonight.
 

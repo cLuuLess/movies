@@ -1,5 +1,4 @@
-28   int. lobby - continuous                                         28
+29   int. another metal hallway - continuous                         29
 
-     a phalanx of security personnel.   crossing the lobby.
-     piercing alarm bells, ringing...
+     more security personnel.   pouring into a hallway...
 

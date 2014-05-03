@@ -1,17 +1,12 @@
-int.  colosseum - holding cells - day
+int./ ext.  slave wagon - roman streets - day
 
-maximus returns to the holding cells.  vibius and juba are
-waiting.
+maximus and the other gladiators are in a slave cart on
+the way from the arena.  a gang of children run alongside
+the cart, cheering and chanting:
 
-					vibius
-		you didn't kill him.
-
-					maximus
-		i will not kill another warrior.
-		there is no honor to it.
-
-maximus goes.  vibius thinks about it, listening to the
-adulation of the crowd.
+					kids
+		maximus the merciful!  maximus the
+		merciful!
 
 the drums continue...
 

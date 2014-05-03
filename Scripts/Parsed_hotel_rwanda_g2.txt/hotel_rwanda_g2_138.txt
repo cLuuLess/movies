@@ -1,21 +1,16 @@
-int. hotel lobby. day
+ext. hotel forecourt. dawn
 
-the lobby is deserted except for gregoire now neatly dressed.
-
-                        paul
-            gregoire it is good to see you back to
-            work.
+a thick mist blankets the grounds as paul and gregoire emerge.
 
                         gregoire
-            please, except my humblest apologies...
+            (fearful) where are we going, sir?
 
                         paul
-            don't worry. i have a job this morning. i
-            must go to visit my good friend george
-            rutagunda. you know george?
+            for supplies, you drive.
 
-gregoire nods, impressed.
+                        gregoire
+            the fog is too heavy, sir.
 
-                        paul (cont'd)
-            fetch the van.
+                        paul
+            just drive, gregoire.
 

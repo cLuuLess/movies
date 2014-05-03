@@ -1,9 +1,7 @@
-312   int. l.o.h.                                                    312
+314   int. l.o.h.                                                    314
 
-      the pilot scans the river with his night-vision goggles.
-      brandt studies the night-vision monitor in front of him.
-      there's nothing but river.
-
-      they zoom by the two fuel cans, but see nothing.
+      the chopper rounds a bend in the river... and there are
+      the two armed guerrilla "customs" boats. the boats open
+      up, and the l.o.h. pilot banks away.
 
 

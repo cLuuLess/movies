@@ -1,6 +1,6 @@
-155   int. union station - washington d.c. - dawn                    155
+158   int. union station - washington d.c. - dawn                       158
 
-      marco jolts awake, as if from a bad dream, startled --
-      cramped on a bench, just another rumpled, weary traveler --
-      early morning commuters gliding past him like a fog.
+      marco grabs a coffee from off a starbucks counter, picks up
+      his bag and heads toward the new york city line platform, to
+      catch his train --
 

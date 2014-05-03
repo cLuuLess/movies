@@ -1,9 +1,26 @@
-ext. kigali. dawn
+int. paul's bedroom. dawn
 
-the faintest grey of dawn over the city. then a flock of birds rises as
-one in the distance. a millisecond later, the cause of their flight, a
-grenade explosion, echoes.
+paul sits on the edge of the bed, staring out the window.
 
-the birds dart, in another direction as the staccato of a machine gun
-rips the air.
+behind him tatiana has roger cradled in her arms, he still trembles
+wide eyed as she tries to get him to talk.
+
+                        tatiana
+            will you take a little milk?
+
+nothing.
+
+                        paul
+            let him sleep.
+
+the door knocks. the old guard calls in frightened.
+
+old guard (o.s.)
+mr. paul.
+
+                        paul
+                 (to tatiana)
+            it is time for the neighbors to leave.
+
+he heads for the door.
 

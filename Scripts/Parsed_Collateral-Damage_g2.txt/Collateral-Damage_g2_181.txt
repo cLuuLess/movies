@@ -1,15 +1,11 @@
-384   ext. another town house - back yard                           384
+395    ext. town house - fire escape                                 395
 
-      a shovel lies in the grass. selena scoops it up and in
-      one motion, spins back toward the gate, launches it
-      blade-first with all her strength, timing it perfectly,
-      as gordy runs through the gate, and...
+       the window selena slipped through easily is small for
+       gordy. he gets hung up on the glass, losing precious
+       seconds. selena's already halfway up when gordy hits the
+       fire escape steps.
 
-
-385   gordy                                                         385
-
-      just barely evades the sharp shovel edge headed for his
-      face. it doesn't hurt him, but it stops him, and selena
-      breaks toward an open door of the house.
+       the fire escape ends at a top floor window. selena
+       breaks out the glass with the crowbar and goes in.
 
 

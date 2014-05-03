@@ -1,16 +1,13 @@
-int.  maximus' tent - night
+ext.  tent city - night
 
-quintus is waking maximus --
-
-					quintus
-		general -- maximus --
+dead of night.  maximus and quintus stride quickly through
+the sleeping camp toward marcus' tent.
 
 					maximus
-		quintus -- ?
+		what is it?  is he ill?
 
 					quintus
-		the emperor needs you.  it's urgent.
+		i don't know...
 
-maximus leaps up and throws on a cloak, strides out with
-quintus...
+they continue on toward marcus' tent.
 

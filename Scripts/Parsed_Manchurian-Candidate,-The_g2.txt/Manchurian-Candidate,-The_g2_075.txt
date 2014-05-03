@@ -1,57 +1,15 @@
-125   int. federal building - conference room - day                  125
+130   ext. central park - day                                          130
 
-      marco with howard, who's visibly upset. he likes marco, it
-      breaks his heart to watch him unravelling like this. agent
-      volk remains in her chair, on the other side of the room:
-      the door opens, and col. garret comes in, with agent
-      goldring, who gives marco back his personal effects, and:
-
-                          agent goldring
-
-                goodbye.
-                    (to marco)
-                get out of here.
-
-                          lt. col. howard
-
-                he's free to go?
-
-                          agent goldring
-
-                shaw won't press charges, and he's got
-                juice with important friends. it's
-                today's daily double.
-      agent volk closes her notebook and moves past goldring as he
-      picks up the tape recorder. she glances at howard, and
-      leaves the room.
-
-                          colonel garret
-
-                someone from senator eleanor shaw's
-                office called and intervened on your
-                behalf.
-      a beat.   marco, trying to process all this:
-
-                          colonel garret
-
-                major, you have reached the terminal end
-                of the army's patience. you're relieved
-                of duty, effective immediately.
-
-                          lt. col. howard
-
-                there's a young neurologist at walter
-                reed. zahn. he's had considerable
-                success with gws -- i want you to get
-                your affairs in order and report to him
-
-                          (more)
+      marco opens his eyes to the glare of a crisp autumn sun,
+      surreal colors: blue sky, shimmering green, the skyline.
+      his head is in rosie's lap, he lies curled in the grass.
+      a banana-yellow motorized model plane buzzes in tight
+      circles overhead.
 
 
 
 
-
-                                                    8/18/03   76.
+                                                      8/18/03   80.
 
 
 
@@ -59,42 +17,83 @@
 
 
 
+        rosie's talking, but ben can't hear her.    just the buzzing.
+        she stops, looks at him.
 
-                          lt. col. howard (cont'd)
+                             rosie
 
-                for evaluation and treatment first thing
-                monday morning.
+                   blank again?
+        marco tries to say something, his mouth is dry.
 
-                          marco
+                             rosie
 
-                sir, i know all about dr. zahn.
-                remember? he's that guy who --
-                    (catches himself)
-                sir. yes sir.
-                    (beat)
-                i'm sorry.
+                   he said this would happen.
+        marco stares, trying to orient himself. his arm comes up to
+        shade his eyes -- nothing written on it.
 
-                          lt. col. howard
+                               marco
 
-                me too, ben.
+                   who?
 
-126   omitted                                                        126
+                             rosie
+
+                   your friend.
+
+                             marco
+
+                   i don't remember a friend.
+        nothing.
+
+                             rosie
+
+                   kind of like a computer system crash --
+                   your brain goes down, then you boot up
+                   again, but you lose all your ram.
+                       (hesitates)
+                   do you remember me?
+
+                             marco
+
+                       (after a beat)
+                   eugenie rose.
+        rosie smiles.     marco closes his eyes again and --
+
+                                                screen goes black.
+
+        silence.   two beats.
+        then the sound of a television fades up:
+
+tv130                        newscaster #3                            tv130
+
+                   u.s. planes bombed selected sites in
+                   guinea today, acting on intelligence that
+                   the african nation's military regime had
+                   secretly resumed its chemical weapons
+                   program ...
+
+131     tight - a television (video)                                     131
+
+131a    campaign footage of raymond shaw visiting schools in the        131a
+131b    inner city, arthur riding horses in wyoming, the two men        131b
+131c    meeting with business leaders in chicago.                       131c
 
 
-127   series of x-rays                                               127
 
-      micro-circuitry, neat as a pin --
 
-                          delp's voice
+                                                    8/18/03   81.
 
-                i thought you said you lost this.
 
-      tight - through a stereoscopic microscope - the implant
 
-      falls into focus, smooth and etched with integrated circuits
-      as intricate and beautiful as a henna tattoo ...
 
-                          marco's voice
 
-                i found it again.
+
+
+
+tv131                       newscaster #4                           tv131
+
+                  ... latest usa today polls indicate a
+                  "secure tomorrow" for gov. robert arthur
+                  and congressman raymond shaw. the duo
+                  holds a commanding lead, entering the
+                  last two weeks of the campaign ...
 

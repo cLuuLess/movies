@@ -1,14 +1,18 @@
-26   int. elevator - continuous                                        26
+27   int. metal corridor - continuous                                27
 
-     the robot suspect standing inside the elevator. looks down
-     at the bullet hole blown through its leg. reaches down.
-     metal fingers touching the damage. as if curious. afraid.
+     spooner springing to his feet.   helping calvin up.
 
-                                                              23.
+                          victor
+                i took the liberty of alerting
+                security .003 seconds after the
+                first shot was fired...
 
+                          spooner
+                where's that elevator going?
 
-     looks back at the other robot. standing in the back of
-     elevator. a primitive model. no reaction. face, blank.
+                          victor
+                sub level 5.
 
-                                               cut back to:
+     spooner slams against a nearby door.   hurtling down the
+     stairs...
 

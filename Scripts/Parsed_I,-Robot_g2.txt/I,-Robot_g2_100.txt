@@ -1,110 +1,26 @@
-100   int. glass room - u.s. robotics - night                         100
+101   ext. plaza - night                                             101
 
-      a room. made entirely of glass. at the very top of the u.s.
-      robotics building. looking out, 360, across the whole city.
+      spooner. walking across the plaza. throwing a look over his
+      shoulder. at the looming u.s.r. facade.
 
-      spooner and calvin. brought to the room by a couple escort
-      robots. they see a man. standing at one of the glass walls
-      looking out at the twinkling lights.
+      pulls sonny's drawing. out of his pocket. looks down at it.
+      shaking his head. passes a trash can. and drops it in.
+      continues on. hands in his pockets. when...
 
-                            man
-                  i thought this investigation was
-                  over, detective spooner.
+      he stops. something.     occurring to him.   turns back to the
+      trash can just as...
 
-      the man turns.   it's lance robertson.
-
-                            robertson
-                  we have the evidence. we have the
-                  suspect. we have a ruling. so
-                  imagine my surprise when i was told
-                  you were in my building.
-
-      shoots a look at calvin.
-
-                            robertson
-                  and that one of my own employees
-                  brought you here.
-                      (beat)
-                  you can go now, susan.
-
-                            calvin
-                  dr. robertson, i...
-
-                            robertson
-                      (cutting her off)
-                  just be thankful i'm not asking you
-                  to clean out your office.
-
-      beat.   calvin, nods.   heads out.   robertson.   watching her.
-
-                            robertson
-                  you don't seem to be able to let go
-                  of this case, detective.
+      a robotic clean-up crew's about to up-end it into a bin...
 
                             spooner
-                  i'm not satisfied.
+                  no!...
 
-                                                            76.
+      he trots back. plucking the drawing. out of the can.       turns
+      it upside down. seeing it. from a new perspective.
 
+                            spooner
+                      (echoing sonny)
+                  "the place where robots meet."
 
-                       robertson
-             the relentless pursuit of truth.
-             isn't that what cops are known for?
-             to the point of futility.
-
-                       spooner
-             there's nothing futile about a
-             man's murder being covered up.
-
-                       robertson
-             "covered up?" that's a little
-             dramatic, don't you think? thanks
-             to you, we caught the machine that
-             did this and are destroying it
-             in...
-                 (checks watch)
-             ...three hours.
-
-                       spooner
-             is that for the sake of humanity or
-             your stock holders?
-
-robertson.   walks across the spooner.   looks him.   right in
-the eye.
-
-                       robertson
-             believe me -- i'd like nothing more
-             than to have that robot. if i
-             could have it in ten years, but not
-             today. as you can see from the
-             press, people are struggling to
-             keep up as it is. there's a hunger
-             for progress, detective. but also
-             a fear. today it would bury this
-             company. that's why i've notified
-             the authorities that we're going to
-             end this -- tonight.
-                 (looks out at the city)
-             the announcement of heinrich's
-             death at the hands of a robot wiped
-             a billion dollars off our stock.
-             so you tell me. if you were in my
-             position, what would you do?
-
-he looks back at spooner and smiles.     that charismatic
-robertson we saw before.
-
-                       robertson
-             now. i believe this conversation
-             is over. i don't want to see you
-             near this building again,
-             detective.
-
-                                                               77.
-
-
-      he turns.   calling over.   to the escort robots...
-
-                            robertson
-                  get him out of here.
+      looks just like a map.
 

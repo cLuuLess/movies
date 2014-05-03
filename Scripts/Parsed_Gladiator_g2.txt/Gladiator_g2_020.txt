@@ -1,193 +1,133 @@
-int.  marcus' tent - day
+int.  tent corridor - day
 
-maximus enters marcus' darkened tent.  flickering braziers
-provide the only light in the enormous imperial tent.
-heavy beams support the canopy and they creak like the
-timbers of a ship as the tent sways slightly in the wind.
+maximus emerges from marcus' tent into a long tent
+corridor, deep in thought.
 
-marcus stands before a map of the roman empire.
+					lucilla's voice
+		he always favored you...
 
-					maximus
-			(bows)
-		caesar.
+he turns.  lucilla is waiting.  she glides to him.
 
-marcus holds out a scroll.
-
-					marcus
-		read this.
+					lucilla
+		even over his son.
 
 					maximus
-		i never acquired the art, sir.
+			(turning away)
+		that's not true.
 
-					marcus
-		of course.  no matter.  in this
-		letter i denote my intention to
-		nominate you to stand for the
-		emperorship after my death.
+					lucilla
+		maximus, stop...
+			(he stops)
+		let me see your face.
 
-a stunned pause.  maximus stares at him.
+he turns to her.
 
-					marcus
-		my son is not a moral man.  you have
-		known this since you were young.  he
-		cannot rule.
+					lucilla
+		you've been crying.
 
 					maximus
-		caesar, i am honored but --
+		i lost too many men.
 
-					marcus
-		for twenty years i have been
-		spilling blood.  for twenty years i
-		have written philosophy and
-		ruminated and conquered.  since i
-		became caesar i have only had four
-		years without war.  four years of
-		peace in twenty.  so perhaps i can
-		be... forgiven.
+					lucilla
+		what does my father intend?
 
-a long beat.
-
-					marcus
-		while i have been fighting, rome has
-		grown mad and corpulent and
-		diseased.  i did this.  and now i
-		shall make it right.
+he turns and walks.  she walks with him.
 
 					maximus
-		sire, you brought the light of the
-		gods to barbarian darkness.  you
-		brought civilization and justice to
-		the farthest --
+		i don't know.
 
-					marcus
-			(fierce)
-		i have brought the sword -- nothing
-		more!  rome is far away and we
-		shouldn't be here.  what matter is
-		it to the gods if we subdue one more
-		tribe of parthians or gauls?  what
-		matter is it to rome if a thousand
-		more barbarians bend to our lash?
+					lucilla
+		you're lying.  i could tell when you
+		were lying even when we were
+		children.  you hate it.
+
+					maximus
+		i never acquired your comfort with
+		it.
+
+					lucilla
+		true.  but then you never had to.
+		maximus, stop...
+			(he stops again)
+		... is it really so terrible seeing
+		me again?
+
+					maximus
+		no.  i'm sorry.  i'm tired from the
+		battle.
+
+					lucilla
+		and you are hurt to see my father
+		dying.
 
 a beat.
 
-marcus sits.  he doesn't look at maximus.
+					lucilla
+		he will announce commodus'
+		succession.  that's why he summoned
+		us.  will you serve my brother as
+		you served his father?
 
-a pause.
-
-					marcus
-		winter, maximus.  it's winter now...
+					maximus
+		i will always serve the ideals of
+		rome.
 
 a beat.
 
-					marcus
-		there was a dream that was rome.  i
-		can only whisper of it now.
-		anything more than a whisper and the
-		dream vanishes.  it's so... fragile.
-		the true glory of rome is in a very
-		fragile idea.  imagine a place
-		devoted to the rights of the
-		citizen.  where every free man has a
-		voice.  that was the dream... and i
-		fear it will not survive the winter.
-
-he holds out a hand to maximus.  maximus takes his hand,
-deeply moved, kneeling.
-
-					marcus
-		let's just whisper here, you and i.
+					lucilla
+		do you know i still remember you in
+		my prayers...?  oh yes, i pray...
+		ever since that day you saved me
+		from drowning off capri.  do you
+		remember?
 
 					maximus
-		yes, caesar.
+		yes.
 
-					marcus
-		if the dream is ever to live again
-		the people must have a true voice.
-		the voice i took from them.  that
-		all the caesars took from them, bit
-		by bit, conquest by conquest.  and
-		now that i am dying i am going to
-		give them that voice again.
+					lucilla
+		commodus was so angry that a mere
+		peasant -- a spaniard no less --
+		touched the royal person, do you
+		remember his anger?
 
 					maximus
-		you're not dying.
+		yes.
 
-					marcus
-		i am, maximus.  it's strange... i
-		find as i near the end i think
-		little of the waning moments around
-		me... instead i think much of the
-		past... and of the future.  how will
-		the world speak my name in years to
-		come?  will i be known as the
-		philosopher?  the warrior?  the
-		tyrant?  or will there be a more
-		golden sounding to my name?  will i
-		be the emperor who gave rome back
-		her freedom?
+					lucilla
+		mark this, maximus:  that is the man
+		who will be emperor.
 
 a beat.
 
-					marcus
-		before i die i will give the people
-		this final gift.  i will give them
-		the senate reborn.  the voice of the
-		people empowered again, as it was
-		always meant to be.  it is my design
-		that they will elect the next
-		emperor.  and i would put forward
-		your name with my backing.
+					maximus
+		may i be permitted to go, highness?
+
+she smiles sadly.
+
+					lucilla
+		there was a time when you didn't
+		call me "highness."
 
 					maximus
-		caesar, you do me honor -- but your
-		son has pride of place for
-		succession.
+		and there was a time when you were
+		just a little girl drowning in the
+		sea.  all that was a different life.
 
-					marcus
-		you are the son i should have had...
-		although i fear in my deepest heart
-		that if you had truly been my son my
-		blood would have polluted you as it
-		did commodus.  we're a cursed
-		bloodline.  we have lived so long in
-		power and depravity that we no
-		longer remember a life without it.
-		we can no longer even imagine a life
-		without it.
-
-a beat.
-
-					marcus
-		look at me, son.
-
-maximus looks at him.
-
-					marcus
-		son... i know that one grove of your
-		vineyard is worth more to you than
-		all the treasures of rome.  i know
-		one loving word from your wife is
-		worth more than the accolades of an
-		empire.  but... a fond old man, who
-		loves you more than he can say, begs
-		you to at least think about what he
-		has said tonight.
+					lucilla
+			(quietly)
+		very different... i wonder if it was
+		better?
 
 					maximus
-		i shall, caesar.
+		it was more honest.
 
-a beat.
+a moment between them.  we sense there is much to be said,
+much that could be said.
 
-					marcus
-		i'll keep this letter to myself.  i
-		hope that with the sunrise you will
-		agree.  and embrace me as a father.
-
-maximus nods and rises.  he begins to go.  stops.
+finally:
 
 					maximus
-		you have always been my father.
+		i thank you for your prayers.
 
-he goes.
+he goes.  she watches him walk away.
 

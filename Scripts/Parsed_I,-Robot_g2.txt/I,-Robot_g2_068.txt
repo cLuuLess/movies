@@ -1,24 +1,10 @@
-68   int. hallway - u.s. robotics - continuous                      68
+69   int. monorail - continuous                                        69
 
-     calvin. heading down a hallway. a door slides open.      and
-     lanning steps out. followed by a technician robot...
+     spooner, holding onto a handrail. as the city rushes by the
+     window. notices a group of robots. at the other end of the
+     car. are they watching him?
 
-                          calvin
-                find anything, doctor?
+     he wipes a bead of sweat.    from his upper lip.
 
-                                                                 57.
-
-
-                          lanning
-                    (shaking his head)
-                nothing. the interior's just like
-                any other ns-2. except for a
-                secondary battery hogenmiller must
-                have used as extra back-up.
-                    (looks at watch)
-                we'll just need a nominal profile.
-
-     calvin nods.
-
-                                               cut back to:
+                                               cut to:
 

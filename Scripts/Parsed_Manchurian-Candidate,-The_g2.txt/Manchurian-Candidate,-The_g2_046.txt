@@ -1,79 +1,35 @@
-81   ext. pay phone - night                                        81
+85   int. melvin's apartment - night                                   85
 
-     marco on a public phone, across the street from melvin's
-     residential hotel. shaken.
+     the light switch doesn't work. click, click. eerie shudder
+     of neon from the sign on the building, shapes crowd the
+     room, claustrophobic ...
+     ... marco has a penlight -- he turns it on, sweeps in front
+     of him with its weak beam:
+     the room -- stacked floor to ceiling with old newspapers,
+     magazines, and hundreds and hundreds of notebooks, covering
+     nearly every available surface.
+     marco picks up a notebook.    moves to a desk and sits.   opens
+     the book --
+
+86   omitted                                                           86
 
 
+87   omitted                                                           87
 
+88   beam of the penlight aimed down at pages filled with crude        88
+     drawings of brains/tomatoes -- number-gibberish (cross-
+     sections, size and weight parameters, and growth sequences)
 
-                                                 8/18/03    45.
+     -- american flags --
 
-
-
-
-
-
-
-
-                          marco
-
-                my god. i'm sorry to hear that. when
-                did it ...
-                    (listens)
-                yeah, i know. i know.
-                    (deep breath)
-                listen, mrs. wilson -- can you tell me if
-                nathan was ever -- preoccupied -- with
-                his experience in kuwait? did he ever
-                mention dreams or nightmares ... about
-                what happened ... the firefight,
-                afterward ...
-                    (beat)
-                -- uh-huh. sure. no, i understand.
-                    (beat)
-                thank you for --
-      dial tone.   he hangs up.   exhales.
-
-                                                          blink.
-
-82    marco listening to the phone on the other end of his call      82
-      ring, and ring and ring. dull hiss of the city.
-
-                                                          blink.
-
-83    another call.                                                   83
-
-                          marco (o.s.)
-
-                ... no, mr. villalobos, i'm just --
-                army's got me running statistics on
-                stress disorders, i'm trying to gather
-                information on my old squad members ...
-                yes sir --
-
-a84   int. noyle's hidden hotel room - night                         a84
-
-      raymond sits in a chair, rigged up with wires and tubes
-      (much like he was ten years ago) -- a translucent box around
-      his face overlaid with a metric grid, his head held
-      motionless by a semi-circular brace, curved calibration
-      offering precise positioning for a micro-drill that noyle
-      moves into place -- and then a long, tiny drill bit whirs
-      down through sterile latex stretched very tight across
-      raymond's head --
-      -- and plunges precisely and effortlessly through raymond's
-      skull, then stops -- he has no reaction, feels nothing --
-      lcd screens -- show a virtual map of raymond's brain, in a
-      full range of primary colors -- sections morphing as
-      thoughts and memories race through his mind, as
-      miniscule, interwoven wires -- are threaded down through the
-      hollow core of the surgical drill, deep into raymond's
-      brain. noyle plays to one of the cameras:
+     -- in the margins, many attempts to capture likenesses of
+     dr. noyle and the mysterious arabic woman, repeatedly
+     crossed out, never right.
 
 
 
 
-                                                  8/18/03   46.
+                                                        8/18/03    47.
 
 
 
@@ -82,21 +38,40 @@ a84   int. noyle's hidden hotel room - night                         a84
 
 
 
-                         noyle
+fb88   flash: dreamscape                                                 fb88
 
-               no decay, no slippage. everything
-               appears to be in flawless working
-               condition.
-                   (then)
-               raymond can you remember the deaths of
-               mavole and baker?
+       noyle turning toward us, eyes bright --
 
-                         raymond
+       resume - marco
 
-               yes.
-     the lcd screens show activity in areas of raymond's brain.
+       -- under the headline what happened, extremely small,
+       cramped handwriting that goes on for pages --
+                    "the recon ends without incident, and we are
+                    heading back to forward command..."
 
-                         noyle
 
-               describe it.
+
+
+                           raymond (v.o.)
+
+                     (fades up:)
+                 ... we're heading back to forward
+                 command. the night is clear. stars but
+                 no moon --
+       marco closes the book, opens another journal. same
+       drawings. same title page. same cramped writing, that
+       begins exactly the same way --
+
+89     tight - raymond (streaming video)                                  89
+
+       the video feed from noyle's hidden hotel room cameras,
+       digital, herky-jerky:
+
+tv89                       raymond (video)                               tv89
+
+                 -- we're engaged unexpectedly by ground
+                 forces with helicopter support. in the
+                 ensuing firefight, bobby baker gets
+                 himself separated to the left. mavole
+                 goes after him ...
 

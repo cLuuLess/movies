@@ -1,19 +1,26 @@
-40   int. hallway - night                                           40
+41   int. control booth - continuous                                41
 
-     a night foreman leads them down a hallway.    shaking his head.
+     ...the control booth. overlooking the pristine factory
+     floor. the foreman starts working the controls of a central
+     computer.
 
-                          night foreman
-                head-office already ordered a
-                system-wide inventory check. don't
-                know about a missing ns-2...
+                          calvin
+                all nestors accounted for?
 
-     looks back at spooner.
+                                                                32.
 
-                          night foreman
-                what'd you say you did?
 
-                          spooner
-                research and development.
+     the screen scrolls with inventory figures.
 
-     as spooner pushes past him into...
+                           night foreman
+                     (gesturing)
+                 as you can see, all properly
+                 catalogued. your robot just isn't
+                 here.
+
+     calvin turns to say something to spooner. but he isn't
+     there. she looks around. then sees the foreman reacting.
+     looks out the window at...
+
+     spooner.   walking out onto the factory floor.
 

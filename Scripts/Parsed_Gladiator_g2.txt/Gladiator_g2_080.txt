@@ -1,14 +1,17 @@
-ext.  colosseum - arena - day
+int.  colosseum - holding cells - day
 
-maximus defeats his opponent.  he stands over him.  he
-does not kill him.
+maximus returns to the holding cells.  vibius and juba are
+waiting.
 
-he tosses his sword down and walks away.  the crowd goes
-crazy, roaring their approval of maximus.
+					vibius
+		you didn't kill him.
 
-senator falco, sits in the stands and watches with some
-alarm.  he glances around as the crowd exalts maximus.  he
-is becoming a hero to the people.
+					maximus
+		i will not kill another warrior.
+		there is no honor to it.
+
+maximus goes.  vibius thinks about it, listening to the
+adulation of the crowd.
 
 the drums continue...
 

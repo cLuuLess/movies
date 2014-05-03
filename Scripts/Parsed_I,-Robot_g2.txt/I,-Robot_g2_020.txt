@@ -1,51 +1,46 @@
-20   int. elevator - day                                              20
+21   int. atrium lobby - continuous                              21
 
-     spooner and calvin descend. victor floats on the wall and
-     smiles wide. spooner looks back at it. with a frown.
+     a soaring lobby. the centerpiece is a five-story statue of a
+     robot, arms outstretched in approximation of da vinci's study
+     of man. robot workers more numerous than humans. they are
+     sleeker. finer. more advanced than those in the outside
+     world.
 
-     the elevator stops, the doors open.    a robot steps on.
-
-                          robot
-                good day, dr. calvin.   good day,
-                sir.
-
-     spooner's jaw. clenches. staring at the robot.       it senses
-     the stare. turns back to him.
-
-                          robot
-                may i be of service to you, sir?
-
-     spooner. breaks the stare.     ignoring the robot.   calvin.
-     looks over at him.
+     calvin and spooner head across.
 
                           calvin
-                aren't you going to answer him?
+                when this company started we were
+                manufacturing three robots a week.
+                now look at us. today's children
+                will never know a world without
+                robots.
 
                           spooner
-                i don't talk to my refrigerator,
-                either.
-
-     calvin folds her arms.
+                the streets are filled with
+                unemployed humans who aren't
+                exactly thrilled with that idea.
 
                           calvin
-                i get the distinct feeling you're
-                one of those people, detective.
+                our robotic systems maintain
+                factory inventories, regulate
+                street traffic -- even run the
+                family home.
 
                           spooner
-                what people?
+                leaving people to do what, doctor?
 
                           calvin
-                those who don't appreciate the work
-                we do here at u.s.r.
+                leaving people to engage in higher
+                pursuits that make life worth
+                living.
 
                           spooner
-                you people do what you do. then
-                it's up to the rest of us to make
-                sense out of the world we wake up
-                in.
+                and what happens when something
+                goes wrong?
 
-     as the elevator doors open on to...
+                          calvin
+                our system's never wrong.
 
-                                                           16.
-
+     as they walk through the crowd, we hear the quiet whir of
+     robot heads as they turn in succession to watch spooner pass.
 

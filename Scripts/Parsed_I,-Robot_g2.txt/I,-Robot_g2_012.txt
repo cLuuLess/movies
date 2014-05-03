@@ -1,6 +1,7 @@
-12   ext. u.s. robotics - establishing - day                        12
+13   int. u.s. robotics - metal corridor - day                      13
 
-     a sprawling glass and metal complex covering many city
-     blocks. the entrance is a large plaza filled with people and
-     robots.
+     an elevator opens with a whoosh. spooner steps out into a
+     featureless corridor. his footsteps, echoing. he stops at a
+     set of opposing doors. looks over at one, when the other
+     suddenly opens.
 

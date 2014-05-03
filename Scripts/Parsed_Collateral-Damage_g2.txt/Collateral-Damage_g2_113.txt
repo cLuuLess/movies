@@ -1,38 +1,47 @@
-265   int. underground bunker - night                                      265
+270    int. cia hacienda - day                                         270
 
-      gordy's still in a deep fog from the beating, barely
-      there at all.
+       updegraf highlights a map for brandt, who thinks aloud --
 
-                                 gordy
-                   ... who are you?
+                                  brandt
+                    it's well-sited... can't surprise
+                    'em, so you gotta outgun 'em...
+                           (beat)
+                    so that's what we're gonna do.
 
-                                 selena
-                   my name is selena.
+                                  updegraf
+                    we're gonna hit it?
 
-                                   gordy
-                   ... his wife?
+                                  brandt
+                    we're not just gonna hit it, we're
+                    gonna wipe if off the globe.
+                    cats, rats, dogs and mice. if
+                    it's moving, it's dead.
 
-                                   selena
-                   yes.
+                                  updegraf
+                    hitting the whole village could
+                    make for a p.r. problem.
 
+                                                         (continued)
 
-      beat. the sea shells clack. gordy loses consciousness
-      again, and everything goes...
+                                                              98.
 
+270   continued:                                                    270
 
-266   black                                                                266
+                                 brandt
+                   i don't care what the puerto
+                   ricans say.
+                          (then, off updegraf's
+                           look)
+                   which part of the word 'war' don't
+                   you understand? our mission down
+                   here isn't just about catching the
+                   wolf.
 
-      the clacking sound continues.         and...
+                                 updegraf
+                   ... what about gordy pitt?
 
-
-267   gordy's pov                                                          267
-
-      this time, when gordy opens his eyes, there's no
-      blurriness. it's a new day. he's better. selena's
-      walking to him with a tray. the shell bracelet clacks as
-      she approaches.
-
-                                 selena
-                   i brought you food.
+                                 brandt
+                   he was told not to be here... the
+                   first choppers'll hit it at 2200.
 
 

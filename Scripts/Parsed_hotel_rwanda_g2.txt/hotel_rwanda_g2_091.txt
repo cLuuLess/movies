@@ -1,16 +1,6 @@
-int. hotel lobby. night
+int. hotel managers office. night
 
-the lobby is overflowing with refugees. paul stands with phone to ear.
+a neat corporate office.
 
-zozo walks up.
-
-                        paul
-                 (to zozo)
-            where's housekeeping? they won't pick up.
-
-                        zozo
-            sir, no one wants to work. they say the
-            boss has left.
-
-paul heads for the back office.
+paul picks up the phone.
 
