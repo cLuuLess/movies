@@ -1,18 +1,22 @@
 library(rpart)
-dataIn <- read.table("~/Research/Data/Movie Results (Cleaned) - All.csv", header=TRUE, sep=",")
-dataIn <- dataIn[,4:26] # Get rid of first col with movie names
+# dataIn <- read.table("~/Research/Data/Movie Results (Cleaned) - New Movies.csv", header=TRUE, sep=",")
+dataIn <- read.csv("~/Research/Data/Movie Results (Cleaned) - New Movies2.csv")
+dataIn = dataIn[dataIn[,1]!="Juno",] # Remove Juno
+dataIn = dataIn[dataIn[,3]=="Comedy",]
+dataIn <- dataIn[,6:dim(dataIn)[2]] # Get rid of first col with movie names
 #dataIn <- dataIn[,4:31] # with genres
+# 
+nTrees <- c(30, 40, 50, 60, 70, 80, 100)
+minSplit <- c(2, 3, 4, 5)
+cpVals <- c(0.1, 0.01, 0.001, 0.0001)
+# nTrees <- c(100)
+# minSplit <- c(2)
+# cpVals <- c(0.0001)
+R2scores <- rep(0, length(nTrees)*length(minSplit)*length(cpVals))
+R2index = 1
 
-#nTrees <- c(40, 50, 60, 70, 80, 90)
-#minSplit <- c(2, 3, 4, 5)
-#cpVals <- c(0.01, 0.001, 0.0001)
-#R2scores <- rep(0, length(nTrees)*length(minSplit)*length(cpVals))
-#R2index = 1
-nTrees <- c(70)
-minSplit <- c(3)
-cpVals <- c(0.0001)
-
-maxR2 = 0
+maxR2 = -100
+minMSE = 100
 t_final = 0
 m_final = 0
 c_final = 0
@@ -27,7 +31,6 @@ for (numTrees in nTrees) {
       predlist <- vector(mode="list", length=numTrees)
       # For bag-CART, sample with replacement and create trees
       for (tree in treeIndices) {
-        # Number of examples = 12, subsampling 6 examples -- hardcoded for now
         sampleInd = sample.int(numExamples, size = 0.8*numExamples, replace = TRUE)
         subsample = dataIn[sampleInd,]
         # train the tree
@@ -44,30 +47,30 @@ for (numTrees in nTrees) {
       # Final predcted movie gross for bag-CART is the average prediction from
       # all the trees in the ensemble.
       finalPrediction = sums / numTrees
-      
-      
+
       # Random toy code for viewing trees
       #printcp(treelist[[1]]) # display the results
       #summary(treelist[[1]]) # detailed summary of splits
       
-      
-      
       MSE = sum((finalPrediction-dataIn[,1])^2)/numExamples
+      MAE = sum(abs(finalPrediction-dataIn[,1]))/numExamples
       E_data = mean(dataIn[,1])
       # how well it will fit to future data -- closer to 1 is better
-      R2 = 1 - sum((finalPrediction-dataIn[,1])^2)/sum((finalPrediction-E_data)^2)
+      R2 = 1 - sum((finalPrediction-dataIn[,1])^2)/sum((dataIn[,1]-E_data)^2)
       R2scores[R2index] = R2
       R2index = R2index + 1
-      # 
+      
+      #if (MSE < minMSE) {
       if (R2 > maxR2) {
         t_final = numTrees
         m_final = m
         c_final = c
         maxR2 = R2
+        minMSE = MSE
         
         # plot trees, save all of them
         for (tree in treeIndices) {
-          png(paste('~/Research/Output/All-grid/tree',tree,'.png',sep=''))
+          png(paste('~/Research/Output/Latent Features/tree',tree,'.png',sep=''))
           plot(treelist[[tree]], uniform=TRUE, main="Preliminary Regression Tree")
           text(treelist[[tree]], use.n=TRUE, all=TRUE, cex=.8)
           dev.off()
@@ -82,7 +85,7 @@ m_final
 c_final
 
 #########
-# relevance index (this code is broken, get relevance index from the next one)
+#relevance index (this code is broken, get relevance index from the next one)
 finaltreelist = table(data.frame(c(names(dataIn[-1]),"<leaf>")))
 for (t in seq(1,length(treelist))) {
   treelength = length(treelist[[t]]$frame$var)
@@ -91,13 +94,13 @@ for (t in seq(1,length(treelist))) {
     finaltreelist[feature] = finaltreelist[feature] + 1
   }
 }
-write.table(finaltreelist,file="~/Research/Data/relevanceindex.csv",sep=",")
-###########
-# depth - use this
-numcols = 22
+ write.table(finaltreelist,file="~/Research/Data/relevanceindex.csv",sep=",")
+# ###########
+# # depth - use this
+numcols = dim(dataIn)[2]
 depths <- as.data.frame(setNames(replicate(numcols,numeric(0), simplify = F), names(dataIn[-1])))
 for(i in 1:15) depths[i, ] <- rep(0,numcols)
-depths["<leaf>"] <- 0
+  depths["<leaf>"] <- 0
 for (t in seq(1,length(treelist))) {
   treelength = length(treelist[[t]]$frame$var)
   varInd <- as.numeric(row.names(treelist[[t]]$frame))
@@ -107,4 +110,4 @@ for (t in seq(1,length(treelist))) {
     depths[row, col] <- depths[row, col] + 1
   }
 }
-write.table(depths,file="~/Research/Data/depths.csv",sep=",")
+ write.table(depths,file="~/Research/Data/depths.csv",sep=",")
