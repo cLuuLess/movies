@@ -1,9 +1,14 @@
 library(rpart)
+dataIn <- read.csv("~/Research/Data/Movie Results (Cleaned) - Final Entire Set - 44 - rescale.csv")
+dataIn <- dataIn[,8:dim(dataIn)[2]] # Get rid of first col with movie names
+combined <- dataIn[,-seq(2,45)]
+#combined <- combined[,-seq(7,50)]
+dataIn <- combined[1:100,]
+holdoutSet <- combined[101:110,]
 # dataIn <- read.table("~/Research/Data/Movie Results (Cleaned) - New Movies.csv", header=TRUE, sep=",")
 dataIn <- read.csv("~/Research/Data/Movie Results (Cleaned) - Final Training Set - 44 - 1st dim 2.csv")
-dataIn = dataIn[dataIn[,1]!="Juno",] # Remove Juno
+#dataIn = dataIn[dataIn[,1]!="Juno",] # Remove Juno
 #dataIn = dataIn[dataIn[,3]=="Comedy",]
-dataIn <- dataIn[,8:dim(dataIn)[2]] # Get rid of first col with movie names
 #dataIn <- dataIn[,4:31] # with genres
 
 # pc <- dataIn[,-1]
@@ -20,12 +25,12 @@ genreData = genreData[genreData[,1]!="Juno",] # Remove Juno
 genreData <- genreData[,-1] # Take out movie names
 dataIn <- data.frame(dataIn,genreData)
 # 
-nTrees <- c(30, 40, 50, 60, 70, 80, 100)
-minSplit <- c(4, 5, 6, 7, 8)
-cpVals <- c(0.1, 0.01, 0.001, 0.0001)
-# nTrees <- c(50)
-# minSplit <- c(8)
-# cpVals <- c(0.0001)
+# nTrees <- c(30, 40, 50, 60, 70, 80, 100)
+# minSplit <- c(4, 5, 6, 7, 8)
+# cpVals <- c(0.1, 0.01, 0.001, 0.0001)
+nTrees <- c(100)
+minSplit <- c(8)
+cpVals <- c(0.0001)
 R2scores <- rep(0, length(nTrees)*length(minSplit)*length(cpVals))
 R2index = 1
 
@@ -72,8 +77,8 @@ for (numTrees in nTrees) {
       #summary(treelist[[1]]) # detailed summary of splits
       
       E_data = mean(dataIn[,1])
-      MSE = sum((finalPrediction-E_data)^2)/numExamples
-      MAE = sum(abs(finalPrediction-E_data))/numExamples
+      MSE = sum((finalPrediction-dataIn[,1])^2)/numExamples
+      MAE = sum(abs(finalPrediction-dataIn[,1]))/numExamples
       # how well it will fit to future data -- closer to 1 is better
       R2 = 1 - sum((finalPrediction-dataIn[,1])^2)/sum((dataIn[,1]-E_data)^2)
       R2scores[R2index] = R2
@@ -141,8 +146,8 @@ hfinalPrediction = hsums / numTrees
 #summary(treelist[[1]]) # detailed summary of splits
 
 hE_data = mean(holdoutSet[,1])
-hMSE = sum((hfinalPrediction-hE_data)^2)/numHoldout
-hMAE = sum(abs(hfinalPrediction-hE_data))/numHoldout
+hMSE = sum((hfinalPrediction-holdoutSet[,1])^2)/numHoldout
+hMAE = sum(abs(hfinalPrediction-holdoutSet[,1]))/numHoldout
 # how well it will fit to future data -- closer to 1 is better
 hR2 = 1 - sum((hfinalPrediction-holdoutSet[,1])^2)/sum((holdoutSet[,1]-hE_data)^2)
 
@@ -173,3 +178,48 @@ for (t in seq(1,length(treelist))) {
   }
 }
  write.table(depths,file="~/Research/Data/depths.csv",sep=",")
+
+MSEs <- c()
+MAEs <- c()
+R2s <- c()
+maxR2 = -100
+minMSE = 100
+maxR2s = c()
+minMSEs = c()
+minMAEs = c()
+bestT = 0
+bestM = 0
+bestC = 0
+
+set.seed(100)
+for (numTrees in nTrees) {
+  for (m in minSplit) {
+    for (c in cpVals) {
+      for (trSize in c(50,60,70,80,90,100,110,120)) {
+        dataIn <- combined[1:trSize,]
+        holdoutSet <- combined[(trSize+1):110,]
+        bag <- ipredbagg(dataIn[,1],dataIn[,-1], nbagg = numTrees, control=rpart.control(minsplit=2, cp=c, maxdepth=m), coob=TRUE)
+        hfinalPrediction = predict(bag, holdoutSet)
+        hE_data = mean(holdoutSet[,1])
+        hMSE = sum((hfinalPrediction-holdoutSet[,1])^2)/numHoldout
+        hMAE = sum(abs(hfinalPrediction-holdoutSet[,1]))/numHoldout
+        # how well it will fit to future data -- closer to 1 is better
+        hR2 = 1 - sum((hfinalPrediction-holdoutSet[,1])^2)/sum((holdoutSet[,1]-hE_data)^2)
+        MSEs <- c(MSEs, hMSE)
+        MAEs <- c(MAEs, hMAE)
+        R2s <- c(R2s, hR2)
+      }
+      if (hR2 > maxR2) {
+        bestT = numTrees
+        bestM = m
+        bestC = c
+        maxR2s = R2s
+        minMSEs = MSEs
+        minMAEs = MAEs
+      }
+    }
+  }
+}
+
+plot(c(50,60,70,80,90,100),minMSEs,type="l",xlab="Number of Training Examples",ylab="MSE")
+plot(c(50,60,70,80,90,100),maxR2s,type="l",xlab="Number of Training Examples",ylab="R2s")
