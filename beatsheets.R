@@ -1,10 +1,13 @@
 library(fda)
-filepath <- "~/Research/Holdout_set/"
+filepath <- "~/Research/Combined/"
 movies <- list.dirs(path = filepath, full.names = FALSE, recursive = FALSE)
 #scenes <- c(224, 137, 187, 100, 86, 116, 137, 197, 165, 163, 152, 126, 150, 195)
 numMovies <- seq(1,length(movies))
 #numDims <- seq(1,3)
-numDims <- 1
+numDims <- 2
+output <- c()
+numsplines = 44
+cutoffpercent = 0.0005 #0.00099
 
 #movies <- c("Parsed_Final-Destination-2_g2.txt")
 #scenes <- c(224)
@@ -32,11 +35,11 @@ for (m in numMovies) {
     
     wordcount = apply(xtab,2,sum);
     totalwords = sum(wordcount); # total words in the entire script
-    cutoffpercent = 0.00099; #0.00099
     wordcutoff = min(which(wordcount <= totalwords*cutoffpercent))
     wordsel <- c(1:wordcutoff); 
     wordsel2 <- which(xtabx$rcntr[1:wordcutoff,1] < mean(xtabx$rcntr[1:wordcutoff,1]) + 3*sd(xtabx$rcntr[1:wordcutoff,1]))
     ytab <- xtab[,wordsel2];
+    ytab <- xtab
     
     #cutoffselection <- c(1:1000);
     #cutoffselection <- allwords[,2]>2;
@@ -76,7 +79,6 @@ for (m in numMovies) {
   #library('fda')
   #full x1
   fdatime = (1:length(x1))
-  numsplines = 44
   #smoothed version of x1
   #fdatime = (1:length(x1f))
   
@@ -145,8 +147,9 @@ for (m in numMovies) {
   #a2$coefficients
   #cat(a$coefficients,file=file6feats,sep=',',append=TRUE)
   #cat("\n",file=file6feats,sep='',append=TRUE)
-  cat(a2$coefficients,file=file22feats,sep='\t',append=TRUE)
-  cat("\n",file=file22feats,sep='',append=TRUE)
+  #cat(a2$coefficients,file=file22feats,sep='\t',append=TRUE)
+  output <- rbind(output,a2$coefficients)
+  #cat("\n",file=file22feats,sep='',append=TRUE)
   
   #KEEP A TABLE WITH THESE 2 NUMBERS FOR LATER REVIEW AS WELL
   #in addition to using the coefficients in prediction tree pring out resvar and the ratio
@@ -181,5 +184,6 @@ for (m in numMovies) {
   #   dev.off()
   
 }
-cat(resvar_table,file="~/Research/Data/resvar.tsv",sep='\n')
-cat(resvar_ratio,file="~/Research/Data/resrat.tsv",sep='\n')
+write.table(output[,1:ncol(output)-1],"~/Research/Data/output_features.csv", sep=",", row.names=FALSE, col.names=FALSE)
+#cat(resvar_table,file="~/Research/Data/resvar.tsv",sep='\n')
+#cat(resvar_ratio,file="~/Research/Data/resrat.tsv",sep='\n')

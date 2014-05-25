@@ -1,13 +1,33 @@
 library(rpart)
-dataIn <- read.csv("~/Research/Data/Movie Results (Cleaned) - Final Entire Set - 44 - rescale.csv")
+dataIn <- read.csv("~/Research/Data/Movie Results (Cleaned) - Final Entire Set - 0.005_saved.csv")
+front <- dataIn[,1:8]
+gross = dataIn[,5]
+dataIn <- data.frame(dataIn,genreData, gross)
+dataIn = dataIn[dataIn[,1]!="Parsed_Juno_g2.txt",] # Remove Juno
 dataIn <- dataIn[,8:dim(dataIn)[2]] # Get rid of first col with movie names
-combined <- dataIn[,-seq(2,45)]
-#combined <- combined[,-seq(7,50)]
+#combined <- dataIn[,-seq(2,45)]
+combined <- dataIn[,-seq(2,46)] # 44 features
+#combined <- dataIn[,-seq(2,46)] # 44 features
+
+####
+output_feats <- read.csv("~/Research/Data/output_features_saved_44_nothresh.csv")
+output_feats2 <- read.csv("~/Research/Data/output_features_saved_44_nothresh_dim3.csv")
+output_feats <- output_feats[,seq(-1,-44)]
+output_feats2 <- output_feats2[,seq(-1,-44)]
+dataIn <- data.frame(front,output_feats,output_feats2)
+#dataIn <- output_feats
+#dataIn <- data.frame(front,dataIn,genreData)
+dataIn = dataIn[dataIn[,1]!="Parsed_Juno_g2.txt",]
+dataIn = dataIn[dataIn[,"Year"]>=1995,]
+dataIn <- dataIn[,8:dim(dataIn)[2]]
+combined = dataIn
+
+####
+
 dataIn <- combined[1:100,]
 holdoutSet <- combined[101:110,]
 # dataIn <- read.table("~/Research/Data/Movie Results (Cleaned) - New Movies.csv", header=TRUE, sep=",")
 dataIn <- read.csv("~/Research/Data/Movie Results (Cleaned) - Final Training Set - 44 - 1st dim 2.csv")
-#dataIn = dataIn[dataIn[,1]!="Juno",] # Remove Juno
 #dataIn = dataIn[dataIn[,3]=="Comedy",]
 #dataIn <- dataIn[,4:31] # with genres
 
@@ -20,17 +40,20 @@ dataIn <- read.csv("~/Research/Data/Movie Results (Cleaned) - Final Training Set
 # dataIn = res
 
 # Get genres
-genreData <- read.csv("~/Research/Data/Movie Results (Cleaned) - Final Train Genres.csv")
-genreData = genreData[genreData[,1]!="Juno",] # Remove Juno
+genreData <- read.csv("~/Research/Data/Movie Results (Cleaned) - Final Entire Genres.csv")
+#genreData = genreData[genreData[,1]!="Juno",] # Remove Juno
 genreData <- genreData[,-1] # Take out movie names
 dataIn <- data.frame(dataIn,genreData)
 # 
 # nTrees <- c(30, 40, 50, 60, 70, 80, 100)
 # minSplit <- c(4, 5, 6, 7, 8)
 # cpVals <- c(0.1, 0.01, 0.001, 0.0001)
+sampleInd = sample(1:120, size = trSize, replace = FALSE)
+dataIn <- combined[sampleInd,]
+holdoutSet <- combined[121:149,]
 nTrees <- c(100)
-minSplit <- c(8)
-cpVals <- c(0.0001)
+minSplit <- c(5)
+cpVals <- c(0.1)
 R2scores <- rep(0, length(nTrees)*length(minSplit)*length(cpVals))
 R2index = 1
 
@@ -50,8 +73,8 @@ for (numTrees in nTrees) {
       predlist <- vector(mode="list", length=numTrees)
       # For bag-CART, sample with replacement and create trees
       for (tree in treeIndices) {
-        sampleInd = sample.int(numExamples, size = 0.8*numExamples, replace = TRUE)
-        subsample = dataIn[sampleInd,]
+        sampleInd2 = sample.int(numExamples, size = 0.5*numExamples, replace = TRUE)
+        subsample = dataIn[sampleInd2,]
         
         #allInd = seq(1,numExamples)
         #testgroup = allInd[-sampleInd]
@@ -184,32 +207,50 @@ MAEs <- c()
 R2s <- c()
 maxR2 = -100
 minMSE = 100
-maxR2s = c()
-minMSEs = c()
-minMAEs = c()
 bestT = 0
 bestM = 0
 bestC = 0
-
-set.seed(100)
-for (numTrees in nTrees) {
+#trSizes = c(50,60,70,80,90,100,110,120)
+#trSizes = c(0.2,0.3,0.4,0.5,0.6,0.7)
+nTrees <- c(50, 60, 70, 80, 90)
+minSplit <- c(4, 5, 6, 7)
+cpVals <- c(0.1, 0.01, 0.001)
+#   nTrees <- c(60)
+#   minSplit <- c(4)
+#   cpVals <- c(0.001)
+trSizes = 99
+#num
+set.seed(150)
   for (m in minSplit) {
     for (c in cpVals) {
-      for (trSize in c(50,60,70,80,90,100,110,120)) {
-        dataIn <- combined[1:trSize,]
-        holdoutSet <- combined[(trSize+1):110,]
-        bag <- ipredbagg(dataIn[,1],dataIn[,-1], nbagg = numTrees, control=rpart.control(minsplit=2, cp=c, maxdepth=m), coob=TRUE)
+      MSEs <- c()
+      MAEs <- c()
+      R2s <- c()
+      for (numTrees in nTrees) {
+      for (trSize in trSizes) {
+        
+        #sampleInd = sample(1:120, size = trSize, replace = FALSE)
+        #dataIn <- combined[sampleInd,]
+        dataIn <- combined[1:99,]
+        holdoutSet <- combined[100:119,]
+        # Brieman bagged trees
+        bag <- ipredbagg(dataIn[,1],dataIn[,-1], nbagg = numTrees, ns=0.5*trSize, control=rpart.control(minsplit=2, cp=c, maxdepth=m), coob=TRUE)
         hfinalPrediction = predict(bag, holdoutSet)
+        # Adaboost
+        #model <- gbm(ROI~., data=dataIn, distribution="gaussian", n.trees=200, bag.fraction=0.5)
+        #hfinalPrediction = predict(model, holdoutSet, n.trees=100)
         hE_data = mean(holdoutSet[,1])
-        hMSE = sum((hfinalPrediction-holdoutSet[,1])^2)/numHoldout
-        hMAE = sum(abs(hfinalPrediction-holdoutSet[,1]))/numHoldout
+        hMSE = sum((hfinalPrediction-holdoutSet[,1])^2)/nrow(holdoutSet)
+        hMAE = sum(abs(hfinalPrediction-holdoutSet[,1]))/nrow(holdoutSet)
         # how well it will fit to future data -- closer to 1 is better
         hR2 = 1 - sum((hfinalPrediction-holdoutSet[,1])^2)/sum((holdoutSet[,1]-hE_data)^2)
         MSEs <- c(MSEs, hMSE)
         MAEs <- c(MAEs, hMAE)
         R2s <- c(R2s, hR2)
       }
-      if (hR2 > maxR2) {
+      if (hMSE < minMSE) {
+        maxR2 = hR2
+        minMSE = hMSE
         bestT = numTrees
         bestM = m
         bestC = c
@@ -221,5 +262,10 @@ for (numTrees in nTrees) {
   }
 }
 
-plot(c(50,60,70,80,90,100),minMSEs,type="l",xlab="Number of Training Examples",ylab="MSE")
-plot(c(50,60,70,80,90,100),maxR2s,type="l",xlab="Number of Training Examples",ylab="R2s")
+plot(minSplit,minMSEs,type="l",xlab="MSE vs numTrees",ylab="MSE")
+plot(trSizes,minMAEs,type="l",xlab="Number of Training Examples",ylab="MAE")
+plot(trSizes,maxR2s,type="l",xlab="Number of Training Examples",ylab="R2s")
+
+h1=hfinalPrediction>median(dataIn[,1])
+h2=holdoutSet[,1]>median(dataIn[,1])
+table(h1,h2)
