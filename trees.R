@@ -11,13 +11,15 @@ combined <- dataIn[,-seq(2,46)] # 44 features
 
 ####
 output_feats <- read.csv("~/Research/Data/output_features_saved_44_nothresh.csv")
-output_feats2 <- read.csv("~/Research/Data/output_features_saved_44_nothresh_dim3.csv")
+#output_feats2 <- read.csv("~/Research/Data/output_features_saved_44_nothresh_dim3.csv")
 output_feats <- output_feats[,seq(-1,-44)]
-output_feats2 <- output_feats2[,seq(-1,-44)]
-dataIn <- data.frame(front,output_feats,output_feats2)
-#dataIn <- output_feats
-#dataIn <- data.frame(front,dataIn,genreData)
+#output_feats2 <- output_feats2[,seq(-1,-44)]
+#dataIn <- data.frame(front,output_feats,output_feats2)
+year <- front[,"Year"]
+dataIn <- output_feats
+dataIn <- data.frame(front,dataIn)
 dataIn = dataIn[dataIn[,1]!="Parsed_Juno_g2.txt",]
+
 dataIn = dataIn[dataIn[,"Year"]>=1995,]
 dataIn <- dataIn[,8:dim(dataIn)[2]]
 combined = dataIn
@@ -58,6 +60,7 @@ R2scores <- rep(0, length(nTrees)*length(minSplit)*length(cpVals))
 R2index = 1
 
 maxR2 = -100
+maxAcc = 0
 minMSE = 100
 t_final = 0
 m_final = 0
@@ -94,7 +97,7 @@ for (numTrees in nTrees) {
       # Final predcted movie gross for bag-CART is the average prediction from
       # all the trees in the ensemble.
       finalPrediction = sums / numTrees
-
+      
       # Random toy code for viewing trees
       #printcp(treelist[[1]]) # display the results
       #summary(treelist[[1]]) # detailed summary of splits
@@ -108,7 +111,7 @@ for (numTrees in nTrees) {
       R2index = R2index + 1
       
       if (MSE < minMSE) {
-      #if (R2 > maxR2) {
+        #if (R2 > maxR2) {
         t_final = numTrees
         m_final = m
         c_final = c
@@ -184,13 +187,13 @@ for (t in seq(1,length(treelist))) {
     finaltreelist[feature] = finaltreelist[feature] + 1
   }
 }
- write.table(finaltreelist,file="~/Research/Data/relevanceindex.csv",sep=",")
+write.table(finaltreelist,file="~/Research/Data/relevanceindex.csv",sep=",")
 # ###########
 # # depth - use this
 numcols = dim(dataIn)[2]
 depths <- as.data.frame(setNames(replicate(numcols,numeric(0), simplify = F), names(dataIn[-1])))
 for(i in 1:15) depths[i, ] <- rep(0,numcols)
-  depths["<leaf>"] <- 0
+depths["<leaf>"] <- 0
 for (t in seq(1,length(treelist))) {
   treelength = length(treelist[[t]]$frame$var)
   varInd <- as.numeric(row.names(treelist[[t]]$frame))
@@ -200,39 +203,49 @@ for (t in seq(1,length(treelist))) {
     depths[row, col] <- depths[row, col] + 1
   }
 }
- write.table(depths,file="~/Research/Data/depths.csv",sep=",")
+write.table(depths,file="~/Research/Data/depths.csv",sep=",")
 
 MSEs <- c()
 MAEs <- c()
 R2s <- c()
+accs <- c()
 maxR2 = -100
+maxAcc = 0
 minMSE = 100
 bestT = 0
 bestM = 0
 bestC = 0
 #trSizes = c(50,60,70,80,90,100,110,120)
 #trSizes = c(0.2,0.3,0.4,0.5,0.6,0.7)
-nTrees <- c(50, 60, 70, 80, 90)
-minSplit <- c(4, 5, 6, 7)
-cpVals <- c(0.1, 0.01, 0.001)
-#   nTrees <- c(60)
-#   minSplit <- c(4)
-#   cpVals <- c(0.001)
-trSizes = 99
+#nTrees <- c(40, 50, 60, 70, 80, 90, 100)
+# minSplit <- c(4, 5, 6, 7)
+# cpVals <- c(0.1, 0.01, 0.001)
+nTrees <- c(50)
+minSplit <- c(7)
+cpVals <- c(0.001)
+years <- c(1980, 1985, 1990, 1995, 2000)
+#years <- c(1995)
+trSize = 0.8*dim(combined)[1]
 #num
-set.seed(150)
-  for (m in minSplit) {
-    for (c in cpVals) {
-      MSEs <- c()
-      MAEs <- c()
-      R2s <- c()
-      for (numTrees in nTrees) {
-      for (trSize in trSizes) {
-        
+#all = combined
+
+for (m in minSplit) {
+  for (c in cpVals) {
+    MSEs <- c()
+    MAEs <- c()
+    R2s <- c()
+    accs <- c()
+    for (numTrees in nTrees) {
+      for (y in years) {
+        set.seed(150)
+#         new = all[all[,"Year"]>=y,]
+#         new = new[new[,"Year"]<y+10,]
+#         combined <- new[,8:dim(new)[2]]
+#         trSize = 0.8*dim(combined)[1]
         #sampleInd = sample(1:120, size = trSize, replace = FALSE)
         #dataIn <- combined[sampleInd,]
-        dataIn <- combined[1:99,]
-        holdoutSet <- combined[100:119,]
+        dataIn <- combined[1:trSize,]
+        holdoutSet <- combined[(trSize+1):dim(combined)[1],]
         # Brieman bagged trees
         bag <- ipredbagg(dataIn[,1],dataIn[,-1], nbagg = numTrees, ns=0.5*trSize, control=rpart.control(minsplit=2, cp=c, maxdepth=m), coob=TRUE)
         hfinalPrediction = predict(bag, holdoutSet)
@@ -247,16 +260,28 @@ set.seed(150)
         MSEs <- c(MSEs, hMSE)
         MAEs <- c(MAEs, hMAE)
         R2s <- c(R2s, hR2)
-      }
-      if (hMSE < minMSE) {
-        maxR2 = hR2
-        minMSE = hMSE
-        bestT = numTrees
-        bestM = m
-        bestC = c
-        maxR2s = R2s
-        minMSEs = MSEs
-        minMAEs = MAEs
+        
+        h1=hfinalPrediction>median(dataIn[,1])
+        h2=holdoutSet[,1]>median(dataIn[,1])
+        h=table(h1,h2)
+        if (length(h) > 2) {
+          acc=(h[1,1]+h[2,2])/sum(h)
+        } else {
+          acc=(h[,"TRUE"])/sum(h)
+        }
+        accs <- c(accs, acc)
+        
+        if (hMSE < minMSE) {
+          maxAcc = acc
+          maxR2 = hR2
+          minMSE = hMSE
+          bestT = numTrees
+          bestM = m
+          bestC = c
+          maxR2s = R2s
+          minMSEs = MSEs
+          minMAEs = MAEs
+        }
       }
     }
   }
@@ -268,4 +293,46 @@ plot(trSizes,maxR2s,type="l",xlab="Number of Training Examples",ylab="R2s")
 
 h1=hfinalPrediction>median(dataIn[,1])
 h2=holdoutSet[,1]>median(dataIn[,1])
-table(h1,h2)
+h=table(h1,h2)
+
+rROIs = c()
+for (y in 5:20) {
+  s=c()
+  for (x in 1:1000) {
+    samp=sample(1:23, size=y, replace=FALSE)
+    setSamples = hold[samp,"orig.ROI"]
+    s=c(s,sum(setSamples))
+  }
+  rROIs=c(rROIs,mean(s))
+}
+
+predROIs=c()
+sortedIdx = sort(hfinalPrediction,decreasing=TRUE,index.return=TRUE)
+for (y in 5:20) {
+  portfolioROI = hold[sortedIdx$ix[1:y],"orig.ROI"]
+  predROIs=c(predROIs,sum(portfolioROI))
+}
+
+rRating=hold[hold[,"Rating"]=="R",]
+notRRating=hold[hold[,"Rating"]!="R",]
+ratingROIs=c()
+for (y in 5:15) {
+  s=c()
+  for (x in 1:1000) {
+    Rsamp=sample(1:nrow(rRating), size=0.6*y, replace=FALSE)
+    notRsamp=sample(1:nrow(notRRating), size=0.4*y, replace=FALSE)
+    setSamples = c(rRating[Rsamp,"orig.ROI"],notRRating[notRsamp,"orig.ROI"])
+    s=c(s,sum(setSamples))
+  }
+  ratingROIs=c(ratingROIs,mean(s))
+}
+
+
+res=rbind(rROIs,predROIs)
+plot(0,0,xlim = c(5,20),ylim = c(0,10),type = "n",xlab="Number of movies in portfolio", ylab="Portfolio ROI")
+title("Portfolio Comparison")
+cl <- rainbow(2)
+for (i in 1:2){
+  lines(5:20, res[i,],col = cl[i],type = 'b')
+}
+legend(13.5,10, c("Random Selection","Bag-CART selection"), lty=c(1,1), col=cl, cex=0.8)
