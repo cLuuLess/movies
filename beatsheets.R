@@ -85,7 +85,7 @@ for (m in numMovies) {
   #creating the basis functions
   basis.range = range(fdatime);
   bsbasis = create.bspline.basis(basis.range,numsplines);
-  #plot(bsbasis[1:5])
+  #plot(bsbasis)
   Xmat = eval.basis(fdatime,bsbasis);
   
   #SKIP THIS PART - WE ARE GOING TO USE ALL 22
@@ -135,7 +135,7 @@ for (m in numMovies) {
   #IT WOULD HELP PLOTTING THESE GRAPHS FOR ALL THE FILMS FOR LATER REVIEW 
   png(paste('~/Research/RPlots/Basis/',movies[m],'.png',sep=''))
 #   plot(x1f,type='l',col='red') #division by 4 due to the filter coefficients that sums to 4
-  plot(x1,type='l',col='red')
+  plot(x1,type='l',col='red',xlab='Scene number', ylab='Dimension 1')
   title(tt)
   lines(a2$fitted)
 #   lines(a$fitted)
