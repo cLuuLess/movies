@@ -23,6 +23,7 @@ dataIn = dataIn[dataIn[,1]!="Parsed_Juno_g2.txt",]
 dataIn = dataIn[dataIn[,"Year"]>=1995,]
 dataIn <- dataIn[,8:dim(dataIn)[2]]
 combined = dataIn
+all = combined
 
 ####
 
@@ -223,7 +224,7 @@ bestC = 0
 nTrees <- c(50)
 minSplit <- c(7)
 cpVals <- c(0.001)
-years <- c(1980, 1985, 1990, 1995, 2000)
+years <- c(1980, 1985, 1990, 1995, 2000, 2005)
 #years <- c(1995)
 trSize = 0.8*dim(combined)[1]
 #num
@@ -244,8 +245,8 @@ for (m in minSplit) {
 #         trSize = 0.8*dim(combined)[1]
         #sampleInd = sample(1:120, size = trSize, replace = FALSE)
         #dataIn <- combined[sampleInd,]
-        dataIn <- combined[1:trSize,]
-        holdoutSet <- combined[(trSize+1):dim(combined)[1],]
+        dataIn <- combined[1:floor(trSize),]
+        holdoutSet <- combined[floor(trSize+1):dim(combined)[1],]
         # Brieman bagged trees
         bag <- ipredbagg(dataIn[,1],dataIn[,-1], nbagg = numTrees, ns=0.5*trSize, control=rpart.control(minsplit=2, cp=c, maxdepth=m), coob=TRUE)
         hfinalPrediction = predict(bag, holdoutSet)
@@ -287,7 +288,7 @@ for (m in minSplit) {
   }
 }
 
-plot(minSplit,minMSEs,type="l",xlab="MSE vs numTrees",ylab="MSE")
+plot(years,MSEs,type="l",xlab="Starting Year",ylab="MSE")
 plot(trSizes,minMAEs,type="l",xlab="Number of Training Examples",ylab="MAE")
 plot(trSizes,maxR2s,type="l",xlab="Number of Training Examples",ylab="R2s")
 
@@ -295,44 +296,70 @@ h1=hfinalPrediction>median(dataIn[,1])
 h2=holdoutSet[,1]>median(dataIn[,1])
 h=table(h1,h2)
 
+######
+# Portfolio Comparison
+newfront = front[front[,1]!="Parsed_Juno_g2.txt",]
+newfront = newfront[newfront[,"Year"]>=1995,]
+newcombined = data.frame(newfront,combined[,-1])
+newcombined = newcombined[newcombined[,"Year"]>=1995,]
+hold = newcombined[(nrow(newcombined)-nrow(holdoutSet)+1):nrow(newcombined),]
+
+portfolioSize = 18
+
 rROIs = c()
-for (y in 5:20) {
+for (y in 5:portfolioSize) {
   s=c()
   for (x in 1:1000) {
-    samp=sample(1:23, size=y, replace=FALSE)
+    samp=sample(1:nrow(hold), size=y, replace=FALSE)
     setSamples = hold[samp,"orig.ROI"]
-    s=c(s,sum(setSamples))
+    prod=sum(as.numeric(hold[samp,"Production.Budget"]))
+    gros=sum(as.numeric(hold[samp,"Gross"]))
+    cur=(0.55*gros-prod)/prod
+    #s=c(s,sum(setSamples))
+    s=c(s,cur)
   }
   rROIs=c(rROIs,mean(s))
 }
 
 predROIs=c()
 sortedIdx = sort(hfinalPrediction,decreasing=TRUE,index.return=TRUE)
-for (y in 5:20) {
+for (y in 5:portfolioSize) {
   portfolioROI = hold[sortedIdx$ix[1:y],"orig.ROI"]
-  predROIs=c(predROIs,sum(portfolioROI))
+  prod=sum(as.numeric(hold[sortedIdx$ix[1:y],"Production.Budget"]))
+  gros=sum(as.numeric(hold[sortedIdx$ix[1:y],"Gross"]))
+  cur=(0.55*gros-prod)/prod
+  #predROIs=c(predROIs,sum(portfolioROI))
+  predROIs=c(predROIs,cur)
 }
 
 rRating=hold[hold[,"Rating"]=="R",]
 notRRating=hold[hold[,"Rating"]!="R",]
 ratingROIs=c()
-for (y in 5:15) {
+for (y in 5:portfolioSize) {
   s=c()
   for (x in 1:1000) {
     Rsamp=sample(1:nrow(rRating), size=0.6*y, replace=FALSE)
     notRsamp=sample(1:nrow(notRRating), size=0.4*y, replace=FALSE)
+    prodR=sum(as.numeric(hold[Rsamp,"Production.Budget"]))
+    grosR=sum(as.numeric(hold[Rsamp,"Gross"]))
+    prodnotR=sum(as.numeric(hold[notRsamp,"Production.Budget"]))
+    grosnotR=sum(as.numeric(hold[notRsamp,"Gross"]))
+    
+    prod=sum(prodR,prodnotR)
+    gros=sum(grosR,grosnotR)
+    cur=(0.55*gros-prod)/prod
+    
     setSamples = c(rRating[Rsamp,"orig.ROI"],notRRating[notRsamp,"orig.ROI"])
-    s=c(s,sum(setSamples))
+    s=c(s,cur)
   }
   ratingROIs=c(ratingROIs,mean(s))
 }
 
-
-res=rbind(rROIs,predROIs)
-plot(0,0,xlim = c(5,20),ylim = c(0,10),type = "n",xlab="Number of movies in portfolio", ylab="Portfolio ROI")
+res=rbind(predROIs,rROIs,ratingROIs)
+plot(0,0,xlim = c(5,portfolioSize),ylim = c(-0.4,0.4),type = "n",xlab="Number of movies in portfolio", ylab="Portfolio ROI")
 title("Portfolio Comparison")
-cl <- rainbow(2)
-for (i in 1:2){
-  lines(5:20, res[i,],col = cl[i],type = 'b')
+cl <- rainbow(3)
+for (i in 1:3){
+  lines(5:portfolioSize, res[i,],col = cl[i],type = 'b')
 }
-legend(13.5,10, c("Random Selection","Bag-CART selection"), lty=c(1,1), col=cl, cex=0.8)
+legend(12.5,0.4, c("Bag-CART selection","Random selection", "MPAA-based selection"), lty=c(1,1), col=cl, cex=0.8)
