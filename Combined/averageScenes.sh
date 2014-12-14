@@ -11,7 +11,6 @@ do
       first=1
       continue
     fi
-    echo $dir
     numfiles=`ls -1 $dir | wc -l`
     declare -i numfiles
     numfiles=$numfiles-2
@@ -24,6 +23,7 @@ do
     if [ $numfiles -lt $min ]; then
       min=$numfiles
     fi
+    echo "$dir	$numfiles"
 done
 declare -i avg
 avg=$sum/$total
