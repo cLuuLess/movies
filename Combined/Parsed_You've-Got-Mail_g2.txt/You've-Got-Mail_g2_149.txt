@@ -1,4 +1,0 @@
-	int. joe's computer screen
-
-	a screen which says reply and which now reads "i'm sorry."
-

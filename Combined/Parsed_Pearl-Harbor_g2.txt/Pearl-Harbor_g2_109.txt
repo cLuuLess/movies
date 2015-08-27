@@ -1,5 +1,0 @@
-	int.  scout plane - night
-
-	the plane climbs to a high altitude, toward the dawn and
-	pearl harbor.
-

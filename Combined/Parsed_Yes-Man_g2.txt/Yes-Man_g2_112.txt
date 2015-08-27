@@ -1,6 +1,0 @@
-          int. airport - security
-          
-          carl walks through security. he puts the package on the
-          conveyor belt. they don't notice anything odd.
-          
-          

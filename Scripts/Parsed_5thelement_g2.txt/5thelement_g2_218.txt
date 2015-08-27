@@ -1,4 +1,0 @@
-221	int.  diva's  suite
-
-	the bomb timer now reads 10 minutes.
-

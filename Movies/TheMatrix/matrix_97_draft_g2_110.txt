@@ -1,6 +1,0 @@
-int.  wall - day
-
-cypher has slipped and is wedged between the wall and
-several thick supply pipes.
-
-

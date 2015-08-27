@@ -1,5 +1,0 @@
-     ext.  supermarket -- day
-
-     welles transfers bags of groceries from the shopping cart
-     into the back seat of his ford.
-

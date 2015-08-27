@@ -1,6 +1,0 @@
-191	int.  concert  hall
-
-	the diva switches from classical music to funk, picking up the tempo.
-
-	intercut':
-

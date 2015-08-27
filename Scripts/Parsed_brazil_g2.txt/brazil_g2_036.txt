@@ -1,5 +1,0 @@
-45  int.   staircase					day		   45
-	
-	sam rushes down the stairs.
-	
-	

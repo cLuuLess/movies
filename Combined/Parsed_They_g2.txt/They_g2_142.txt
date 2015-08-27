@@ -1,4 +1,0 @@
-int. subway 
-station - escalator - continuous
-julia bolts 
-down the escalator.

@@ -1,4 +1,0 @@
-     int.  supply room
-
-     red is urgently rummaging through crowbars, coils of rope, sledge
-     hammers.  at last he finds two axes, grabs them and exits.

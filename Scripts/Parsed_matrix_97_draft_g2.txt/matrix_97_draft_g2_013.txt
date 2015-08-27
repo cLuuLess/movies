@@ -1,6 +1,0 @@
-ext.  skyscraper
-
-the downtown office of cortechs, a software development
-company.
-
-

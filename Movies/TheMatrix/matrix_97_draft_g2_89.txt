@@ -1,8 +1,0 @@
-int.  main deck
-
-tank sees what was changed.
-
-                         tank
-          it's a trap!
-
-

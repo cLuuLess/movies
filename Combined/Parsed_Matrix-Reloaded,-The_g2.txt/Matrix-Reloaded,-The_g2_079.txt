@@ -1,5 +1,0 @@
-int. tank turret
-
-the gunner screams as the breech explodes, blocking our view.
-
-

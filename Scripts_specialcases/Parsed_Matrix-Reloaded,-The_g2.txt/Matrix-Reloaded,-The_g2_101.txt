@@ -1,5 +1,0 @@
-int. stairway
-
-gregory hurtles down the stairs, one at a time.
-
-

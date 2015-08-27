@@ -1,5 +1,0 @@
-int.                        castle siege room                           night
-
-ujio fires arrows through the siege ports -- momentarily delaying the guards
-as algren leads them toward a rear stairs.
-
